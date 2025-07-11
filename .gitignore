@@ -1,0 +1,2 @@
+# Ignore Jupyter Book build output
+docs/_build/*
