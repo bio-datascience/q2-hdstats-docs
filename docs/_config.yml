@@ -6,6 +6,7 @@ author: Biomedical Statistics and Data Science Group @ LMU & Helmholtz Munich
 
 sphinx:
   config:
+    bibtex_default_style: "unsrt"  # For numbered citations [1], [2], etc.
     html_theme_options:
       logo:
         image_light: images/logo_light.svg
