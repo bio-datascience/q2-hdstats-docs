@@ -22,5 +22,5 @@ conda activate jupyter-book
 **Build the book:**
 
 ```shell
-jupyter-book build --all moshpit_docs
+jupyter-book build --all docs
 ```
