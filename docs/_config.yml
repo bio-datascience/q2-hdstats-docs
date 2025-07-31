@@ -6,11 +6,15 @@ author: Biomedical Statistics and Data Science Group @ LMU & Helmholtz Munich
 
 sphinx:
   config:
+    copyright: "2025"
     bibtex_default_style: "unsrt"  # For numbered citations [1], [2], etc.
+    bibtex_bibfiles: ["references.bib"]
     html_theme_options:
       logo:
         image_light: images/logo_light.svg
         image_dark: images/logo_dark.svg
+  extra_extensions:
+    - sphinxcontrib.bibtex
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
