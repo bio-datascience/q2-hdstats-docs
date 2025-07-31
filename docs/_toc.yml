@@ -1,0 +1,41 @@
+format: jb-book
+root: intro
+chapters:
+  - file: chapters/00_getting_started/01_intro
+    title: Getting Started
+    sections:
+      - file: chapters/00_getting_started/02_data
+        title: Atacama Soil Microbiome
+
+  - file: chapters/01_installation/01_prerequisites
+    title: Prerequisites & Installation
+    sections:
+      - file: chapters/01_installation/02_q2_gglasso
+        title: Installing q2-gglasso
+      - file: chapters/01_installation/03_q2_classo
+        title: Installing q2-classo
+
+  - file: chapters/02_graphical_models/01_data_preparation
+    title: Graphical Lasso Models
+    sections:
+      - file: chapters/02_graphical_models/02_sgl
+        title: Single Graphical Lasso
+      - file: chapters/02_graphical_models/03_slr
+        title: Single Graphical Lasso with Latent Variables
+      - file: chapters/02_graphical_models/04_adaptive_glasso
+        title: Adaptive Graphical Lasso
+      - file: chapters/02_graphical_models/05_interpretation
+        title: Networks Interpretation
+
+  - file: chapters/03_logcontrast_models/01_data_preparation
+    title: Log-Contrast Models
+    sections:
+      - file: chapters/03_logcontrast_models/02_regression
+        title: Regression
+      - file: chapters/03_logcontrast_models/03_classification
+        title: Classification
+      - file: chapters/03_logcontrast_models/04_interpretation
+        title: Interpretation
+
+  - file: references
+    title: References
