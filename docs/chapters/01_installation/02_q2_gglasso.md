@@ -1,6 +1,6 @@
 # Installing q2-gglasso
 
-### Conda Environment
+## Conda Environment
 
 Create a dedicated conda environment for q2-gglasso:
 
@@ -18,13 +18,14 @@ conda activate qiime2-amplicon-2025.4
 # Clone and install q2-gglasso
 git clone https://github.com/bio-datascience/q2-gglasso.git
 cd q2-gglasso
+python setup.py install
 pip install -e .
 
 # Refresh QIIME 2 cache
 qiime dev refresh-cache
 ```
 
-### Docker Installation
+## Docker Installation
 
 Docker image of q2-gglasso is available through Docker Hub:
 
@@ -39,22 +40,6 @@ docker run -it -v $(pwd):/data ovlasovets/q2-gglasso:latest
 docker run -it -v /path/to/your/data:/data ovlasovets/q2-gglasso:latest qiime gglasso --help
 ```
 
-## Source Installation
-
-The q2-gglasso plugin can be installed directly from the source:
-
-```bash
-# Clone the repository
-git clone https://github.com/bio-datascience/q2-gglasso.git
-cd q2-gglasso
-
-# Install in development mode
-pip install -e .
-
-# Refresh QIIME 2 cache
-qiime dev refresh-cache
-```
-
 ### Verification
 
 To verify that q2-gglasso is correctly installed:
@@ -62,9 +47,6 @@ To verify that q2-gglasso is correctly installed:
 ```bash
 # Check that gglasso is available
 qiime gglasso --help
-
-# List all gglasso commands
-qiime gglasso info
 ```
 
 The installation is now complete! You can proceed to explore the plugin's functionality.
