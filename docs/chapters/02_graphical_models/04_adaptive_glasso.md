@@ -25,9 +25,9 @@ First, apply a modified centered log-ratio (mCLR) transformation and standardize
 qiime gglasso transform-features \
      --p-transformation mclr \
      --p-add-metadata True \
-     --i-table data/pandas-counts.qza \
+     --i-table data/atacama-counts.qza \
      --i-taxonomy data/classification.qza \
-     --m-sample-metadata-file data/atacama-selected-covariates.tsv \
+     --m-sample-metadata-file data/selected-atacama-sample-metadata.tsv  \
      --o-transformed-table data/atacama-table-mclr-meta.qza
 ```
 
