@@ -1,11 +1,11 @@
-# Atacama soil microbiome analysis
+# Data Preparation
 
 We'll use the Atacama soil microbiome dataset {cite}`neilson2017significant`, which contains:
-- 50 samples from Atacama Desert soil
-- 13 microbial taxa (ASVs)
-- Environmental covariates: pH, elevation, temperature, humidity
+- $N = 49$ samples from Atacama Desert soil
+- $p = 13$ microbial taxa (ASVs)
+- $q = 5$ environmental covariates: pH, elevation, temperature, humidity, and vegetation
 
-The original data is available through the European Nucleotide Archive under accession [ERP019482](https://www.ebi.ac.uk/ena/browser/view/PRJEB17617).
+For more details about this dataset, see [Data Overview](../00_getting_started/02_data.md).
 
 ## Load the Data
 
@@ -16,7 +16,6 @@ mkdir -p data
 # Download the example data files
 wget -O data/atacama-counts.qza https://github.com/bio-datascience/q2-gglasso/tree/master/data/atacama-counts.qza
 wget -O data/classification.qza https://github.com/bio-datascience/q2-gglasso/tree/master/data/classification.qza
-wget -O data/selected-atacama-sample-metadata.tsv https://github.com/bio-datascience/q2-gglasso/tree/master/data/selected-atacama-sample-metadata.tsv
 wget -O data/atacama-selected-covariates.tsv https://github.com/bio-datascience/q2-gglasso/tree/master/data/atacama-selected-covariates.tsv
 ```
 
@@ -32,7 +31,7 @@ qiime gglasso transform-features \
      --p-scale-metadata False \
      --i-table data/atacama-counts.qza \
      --i-taxonomy data/classification.qza \
-     --m-sample-metadata-file data/selected-atacama-sample-metadata.tsv \
+     --m-sample-metadata-file data/atacama-selected-covariates.tsv \
      --o-transformed-table data/atacama-table-mclr.qza
 ```
 
