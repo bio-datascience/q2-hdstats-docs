@@ -1,36 +1,5 @@
 # Installing q2-classo
 
-## Source Installation
-
-The q2-classo plugin can be installed directly from the source:
-
-```bash
-# Clone the repository
-git clone https://github.com/bio-datascience/q2-classo-latest.git
-cd q2-classo-latest
-
-# Install in development mode
-pip install -e .
-
-# Refresh QIIME 2 cache
-qiime dev refresh-cache
-```
-
-### Docker Installation
-
-Docker image of q2-classo is available through Docker Hub:
-
-```bash
-# Pull the Docker image
-docker pull ovlasovets/q2-classo:latest
-
-# Run q2-classo container with volume mapping for data
-docker run -it -v $(pwd):/data ovlasovets/q2-classo:latest
-
-# Alternative: Run specific analysis with data directory
-docker run -it -v /path/to/your/data:/data ovlasovets/q2-classo:latest qiime classo --help
-```
-
 ### Conda Environment
 
 Create a dedicated conda environment for q2-classo:
@@ -50,6 +19,37 @@ conda activate qiime2-amplicon-2025.4
 git clone https://github.com/bio-datascience/q2-classo-latest.git
 cd q2-classo-latest
 pip install -e .
+qiime dev refresh-cache
+```
+
+### Docker Installation
+
+Docker image of q2-classo is available through Docker Hub:
+
+```bash
+# Pull the Docker image
+docker pull ovlasovets/q2-classo:latest
+
+# Run q2-classo container with volume mapping for data
+docker run -it -v $(pwd):/data ovlasovets/q2-classo:latest
+
+# Alternative: Run specific analysis with data directory
+docker run -it -v /path/to/your/data:/data ovlasovets/q2-classo:latest qiime classo --help
+```
+
+## Source Installation
+
+The q2-classo plugin can be installed directly from the source:
+
+```bash
+# Clone the repository
+git clone https://github.com/bio-datascience/q2-classo-latest.git
+cd q2-classo-latest
+
+# Install in development mode
+pip install -e .
+
+# Refresh QIIME 2 cache
 qiime dev refresh-cache
 ```
 

@@ -1,15 +1,23 @@
 # Installing q2-gglasso
 
-## Source Installation
+### Conda Environment
 
-The q2-gglasso plugin can be installed directly from the source:
+Create a dedicated conda environment for q2-gglasso:
 
 ```bash
-# Clone the repository
+# Create and activate QIIME 2 environment
+# Example for macOS (Intel) - see other options at:
+# https://library.qiime2.org/quickstart/amplicon#id-3-install-the-base-distributions-conda-environment
+conda env create \
+  --name qiime2-amplicon-2025.4 \
+  --file https://raw.githubusercontent.com/qiime2/distributions/refs/heads/dev/2025.4/amplicon/released/qiime2-amplicon-macos-latest-conda.yml
+
+# Activate the environment
+conda activate qiime2-amplicon-2025.4
+
+# Clone and install q2-gglasso
 git clone https://github.com/bio-datascience/q2-gglasso.git
 cd q2-gglasso
-
-# Install in development mode
 pip install -e .
 
 # Refresh QIIME 2 cache
@@ -31,24 +39,16 @@ docker run -it -v $(pwd):/data ovlasovets/q2-gglasso:latest
 docker run -it -v /path/to/your/data:/data ovlasovets/q2-gglasso:latest qiime gglasso --help
 ```
 
-### Conda Environment
+## Source Installation
 
-Create a dedicated conda environment for q2-gglasso:
+The q2-gglasso plugin can be installed directly from the source:
 
 ```bash
-# Create and activate QIIME 2 environment
-# Example for macOS (Intel) - see other options at:
-# https://library.qiime2.org/quickstart/amplicon#id-3-install-the-base-distributions-conda-environment
-conda env create \
-  --name qiime2-amplicon-2025.4 \
-  --file https://raw.githubusercontent.com/qiime2/distributions/refs/heads/dev/2025.4/amplicon/released/qiime2-amplicon-macos-latest-conda.yml
-
-# Activate the environment
-conda activate qiime2-amplicon-2025.4
-
-# Clone and install q2-gglasso
+# Clone the repository
 git clone https://github.com/bio-datascience/q2-gglasso.git
 cd q2-gglasso
+
+# Install in development mode
 pip install -e .
 
 # Refresh QIIME 2 cache
