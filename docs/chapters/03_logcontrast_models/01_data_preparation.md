@@ -2,31 +2,21 @@
 
 This guide demonstrates how to prepare microbiome data for log-contrast analysis using q2-classo. We'll walk through transforming features, adding taxonomic information and covariates, and splitting data for machine learning tasks.
 
-## 1. Transform Features with CLR
-
-The Centered Log-Ratio (CLR) transformation is essential for compositional data analysis:
+## Load the Data
 
 ```bash
-qiime classo transform-features \
-     --p-transformation clr \
-     --p-coef 0.5 \
-     --i-features genus_table.qza \
-     --o-x genus_table_clr
+# Create data directory if it doesn't exist
+mkdir -p data
+
+# Download the example data files
+wget -O data/atacama-counts.qza
+wget -O data/classification.qza
+wget -O data/atacama-selected-covariates.tsv 
 ```
 
-## 2. Summarize Feature Table
+## Data Transformation
 
-Check your data quality and statistics:
-
-```bash
-qiime feature-table summarize \
-    --i-table filtered-table.qza \
-    --o-visualization table-summary.qzv
-```
-
-## 3. Apply CLR to Main Dataset
-
-Transform your main feature table using the same parameters:
+Transform count data using CLR transformation:
 
 ```bash
 qiime classo transform-features \
@@ -36,7 +26,7 @@ qiime classo transform-features \
      --o-x xclr
 ```
 
-## 4. Add Taxonomic Information
+## Add Taxonomic Information
 
 Incorporate taxonomic classifications and compute adaptive weights:
 
@@ -48,7 +38,7 @@ qiime classo add-taxa \
     --o-aweights wtaxa
 ```
 
-## 5. Add Covariates
+## Add Covariates
 
 Include environmental metadata with custom weights for each covariate:
 
@@ -56,7 +46,7 @@ Include environmental metadata with custom weights for each covariate:
 qiime classo add-covariates \
     --i-features xtaxa.qza \
     --i-weights wtaxa.qza \
-    --m-covariates-file atacama-sample-metadata.tsv \
+    --m-covariates-file atacama-selected-covariates.tsv \
     --p-to-add elevation ph toc ec average-soil-relative-humidity average-soil-temperature \
     --p-w-to-add 1. 0.1 0.1 0.1 1. 1. \
     --o-new-features xcovariates \
@@ -64,14 +54,14 @@ qiime classo add-covariates \
     --o-new-w wcovariates
 ```
 
-## 6. Split Data for Regression Analysis
+## Split Data for Regression Analysis
 
 Create training and test sets for continuous target prediction:
 
 ```bash
 qiime sample-classifier split-table \
     --i-table xcovariates.qza \
-    --m-metadata-file atacama-sample-metadata.tsv \
+    --m-metadata-file atacama-selected-covariates.tsv \
     --m-metadata-column average-soil-temperature \
     --p-test-size 0.2 \
     --p-random-state 42 \
@@ -86,14 +76,14 @@ qiime sample-classifier split-table \
 # --o-test-targets test-targets.qza
 ```
 
-## 7. Split Data for Classification Analysis
+## Split Data for Classification Analysis
 
 Create training and test sets for categorical target prediction:
 
 ```bash
 qiime sample-classifier split-table \
     --i-table xcovariates.qza \
-    --m-metadata-file atacama-sample-metadata.tsv \
+    --m-metadata-file atacama-selected-covariates.tsv \
     --m-metadata-column vegetation \
     --p-test-size 0.2 \
     --p-random-state 42 \
