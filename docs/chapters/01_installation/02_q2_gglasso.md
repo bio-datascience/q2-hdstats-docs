@@ -19,6 +19,7 @@ conda activate qiime2-amplicon-2025.4
 git clone https://github.com/bio-datascience/q2-gglasso.git
 cd q2-gglasso
 python setup.py install
+python -m pip install --no-cache-dir -r requirements.txt
 pip install -e .
 
 # Refresh QIIME 2 cache

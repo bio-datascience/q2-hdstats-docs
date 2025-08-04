@@ -18,6 +18,7 @@ conda activate qiime2-amplicon-2025.4
 # Clone and install q2-classo
 git clone https://github.com/bio-datascience/q2-classo-latest.git
 cd q2-classo-latest
+python -m pip install --no-cache-dir -r requirements.txt
 pip install -e .
 qiime dev refresh-cache
 ```

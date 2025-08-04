@@ -7,18 +7,6 @@ We'll use the Atacama soil microbiome dataset {cite}`neilson2017significant`, wh
 
 For more details about this dataset, see [Data Overview](../00_getting_started/02_data.md).
 
-## Load the Data
-
-```bash
-# Create data directory if it doesn't exist
-mkdir -p data
-
-# Download the example data files
-wget -O data/atacama-counts.qza https://github.com/bio-datascience/q2-gglasso/tree/master/data/atacama-counts.qza
-wget -O data/classification.qza https://github.com/bio-datascience/q2-gglasso/tree/master/data/classification.qza
-wget -O data/atacama-selected-covariates.tsv https://github.com/bio-datascience/q2-gglasso/tree/master/data/atacama-selected-covariates.tsv
-```
-
 ## Data Transformation
 
 Microbiome data represents relative abundances constrained to sum to a constant.
@@ -31,7 +19,7 @@ qiime gglasso transform-features \
      --p-scale-metadata False \
      --i-table data/atacama-counts.qza \
      --i-taxonomy data/classification.qza \
-     --m-sample-metadata-file data/atacama-selected-covariates.tsv \
+     --m-sample-metadata-file data/selected-atacama-sample-metadata.tsv \
      --o-transformed-table data/atacama-table-mclr.qza
 ```
 
