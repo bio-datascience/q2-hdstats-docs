@@ -31,7 +31,7 @@ This chapter explains how to interpret the results from previous chapters and di
 Once network associations are identified, use **q2-classo** for regression and classification tasks:
 
 1. **Feature selection**: Use identified microbial associations as candidate features for environmental or phenotype prediction
-2. **Regression analysis**: Model continuous outcomes (pH, temperature, biomarker levels) with sparse microbial predictors
+2. **Regression analysis**: Model continuous outcomes with sparse microbial predictorss
 3. **Classification tasks**: Predict binary outcome using selected microbial features
-4. **Cross-validation**: Validate predictive performance using classo's built-in CV methods
+4. **Model selection**: Validate predictive performance using classo's built-in model selection methods
 
