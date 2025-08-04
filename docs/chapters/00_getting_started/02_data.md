@@ -1,89 +1,10 @@
 # Atacama Soil Microbiome
 
-In our example, we showcase the application of our QIIME2 plugins for high-dimensional statistics using the Atacama soil microbiome dataset (Neilson et al., 2017). With q2-gglasso we solve various graphical lasso problems to identify microbial associations which we later assess by fitting sparse log-contrast models implemented in q2-classo. Microbiome bioinformatics analyses was conducted using QIIME 2 version 2022.4 (Bolyen et al., 2019). The processing of raw sequence data involved demultiplexing and quality filtering, facilitated by the q2-demux plugin. Subsequent denoising was performed using DADA2 (Callahan et al., 2016) through the q2-dada2 plugin. Taxonomic assignments for Amplicon Sequence Variants (ASVs) were accomplished using the q2-feature-classifier (Bokulich et al., 2018b) with the naive Bayes taxonomy classifier, trained on the Silva Database (Quast et al., 2012).
+In our example, we showcase the application of our QIIME2 plugins for high-dimensional statistics using the Atacama soil microbiome dataset {cite}`neilson2017significant`. With q2-gglasso we solve various graphical lasso problems to identify microbial associations which we later assess by fitting sparse log-contrast models implemented in q2-classo. Microbiome bioinformatics analyses were conducted using QIIME 2 version 2022.4 {cite}`bolyen2019reproducible`. The processing of raw sequence data involved demultiplexing and quality filtering, facilitated by the q2-demux plugin. Subsequent denoising was performed using DADA2 {cite}`callahan2016dada2` through the q2-dada2 plugin. Taxonomic assignments for Amplicon Sequence Variants (ASVs) were accomplished using the q2-feature-classifier {cite}`bokulich2018q2` with the naive Bayes taxonomy classifier, trained on the Silva Database {cite}`quast2012silva`.
 
 ## Data Preprocessing Pipeline
 
-Here is the original code for Atacama example data preprocessing:
-
-### 1. Import Raw Sequences
-
-First, we import the raw paired-end sequences into QIIME2 format:
-
-```bash
-qiime tools import \
-    --type EMPPairedEndSequences \
-    --input-path data/atacama-emp-paired-end-sequences \
-    --output-path data/atacama-emp-paired-end-sequences.qza
-```
-
-### 2. Demultiplex Sequences
-
-Next, we demultiplex the sequences using the sample metadata and barcode information:
-
-```bash
-qiime demux emp-paired \
-  --m-barcodes-file data/atacama-sample-metadata.tsv \
-  --m-barcodes-column barcode-sequence \
-  --p-rev-comp-mapping-barcodes \
-  --i-seqs data/atacama-emp-paired-end-sequences.qza \
-  --o-per-sample-sequences data/atacama-demux-full.qza \
-  --o-error-correction-details data/atacama-demux-details.qza
-```
-
-### 3. Subsample Data
-
-To reduce computational time, we subsample 30% of the sequences:
-
-```bash
-qiime demux subsample-paired \
-  --i-sequences data/atacama-demux-full.qza \
-  --p-fraction 0.3 \
-  --o-subsampled-sequences data/atacama-demux-subsample.qza
-```
-
-### 4. Filter Low-Quality Samples
-
-We filter out samples with fewer than 100 forward sequences:
-
-```bash
-qiime demux filter-samples \
-  --i-demux data/atacama-demux-subsample.qza \
-  --m-metadata-file data/atacama-demux-subsample/per-sample-fastq-counts.tsv \
-  --p-where 'CAST([forward sequence count] AS INT) > 100' \
-  --o-filtered-demux data/atacama-demux_subsample.qza
-```
-
-### 5. Denoise with DADA2
-
-We perform denoising and chimera removal using DADA2:
-
-```bash
-qiime dada2 denoise-paired \
-  --i-demultiplexed-seqs data/atacama-demux_subsample.qza \
-  --p-trim-left-f 13 \
-  --p-trim-left-r 13 \
-  --p-trunc-len-f 150 \
-  --p-trunc-len-r 150 \
-  --o-table data/atacama-table.qza \
-  --o-representative-sequences data/atacama-subsample-rep-seqs.qza \
-  --o-denoising-stats data/atacama-subsample-denoising-stats.qza
-```
-
-### 6. Filter Low-Frequency Features
-
-Finally, we remove features that appear fewer than 100 times across all samples:
-
-```bash
-qiime feature-table filter-features \
-     --i-table data/atacama-table.qza \
-     --o-filtered-table data/atacama-table.qza \
-     --p-min-frequency 100
-```
-
-## ASV Renaming
-
-One can simply follow the original Atacama tutorial, but we wanted to give these ASVs meaningful names for the sake of this example. That's why we rename the ASV keys as follows:
+Here is the original code for Atacama example data [preprocessing](https://docs.qiime2.org/2024.10/tutorials/atacama-soils/). One can simply follow the original Atacama tutorial, but we wanted to give these ASVs meaningful names for the sake of this example. That's why we rename the ASV keys as follows:
 
 | ASV label | Real ASV ID                      |
 | --------- | -------------------------------- |
@@ -101,3 +22,22 @@ One can simply follow the original Atacama tutorial, but we wanted to give these
 | ASV-12    | a7b877ae6d2f079a15b6b192a4425620 |
 | ASV-13    | 409faa5f5353e543bf6d99125c7c0e83 |
 
+## Data for Downstream analysis
+
+We'll use the Atacama soil microbiome dataset {cite}`neilson2017significant`, which contains:
+- 49 samples from Atacama Desert soil;
+- 13 microbial taxa (ASVs)
+- Environmental covariates: pH, elevation, temperature, humidity, and vegetayion
+
+The original data is available through the European Nucleotide Archive under accession [ERP019482](https://www.ebi.ac.uk/ena/browser/view/PRJEB17617).
+
+| Sample ID | ASV-1 | ASV-2 | ASV-3 | ... | ASV-11 | ASV-12 | ASV-13 | Elevation | pH | Avg Soil RH | Avg Soil Temp | Vegetation |
+|-----------|-------|-------|-------|-----|--------|--------|--------|-----------|----|-----------|--------------|-----------| 
+| BAQ2420.1.1 | 0.0 | 11.0 | 0.0 | ... | 115.0 | 0.0 | 0.0 | 2420 | 9.33 | 82.54 | 22.45 | no |
+| BAQ2420.1.2 | 0.0 | 0.0 | 0.0 | ... | 0.0 | 0.0 | 0.0 | 2420 | 9.36 | 82.54 | 22.45 | no |
+| BAQ2420.1.3 | 0.0 | 0.0 | 0.0 | ... | 0.0 | 0.0 | 0.0 | 2420 | 8.90 | 82.54 | 22.45 | no |
+| ... | ... | ... | ... | ... | ... | ... | ... | ... | ... | ... | ... | ... |
+| YUN3856.2 | 6.0 | 13.0 | 26.0 | ... | 0.0 | 0.0 | 104.0 | 3856 | 7.43 | 99.44 | 9.51 | yes |
+| YUN3856.3 | 21.0 | 36.0 | 23.0 | ... | 33.0 | 0.0 | 0.0 | 3856 | 7.43 | 99.44 | 9.51 | yes |
+
+QIIME2 .qza file can be downloaded from this [link](https://github.com/bio-datascience/q2-gglasso/tree/master/data/atacama-counts.qza), here is the snapshot of the count data and corresponding [metadata](https://data.qiime2.org/2024.10/tutorials/atacama-soils/sample_metadata.tsv) we're using in our example.
