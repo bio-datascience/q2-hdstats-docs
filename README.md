@@ -1,4 +1,5 @@
 [![GitHub Pages](https://img.shields.io/badge/docs-GitHub%20Pages-blue)](https://Vlasovets.github.io/q2-hdstats-docs/)
+[![deploy-book](https://github.com/bio-datascience/q2-hdstats-docs/actions/workflows/ci.yml/badge.svg)](https://github.com/bio-datascience/q2-hdstats-docs/actions/workflows/ci.yml)
 
 
 # High-dimensional Statistics with QIIME 2
