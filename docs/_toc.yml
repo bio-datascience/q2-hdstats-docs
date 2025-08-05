@@ -25,7 +25,7 @@ chapters:
       - file: chapters/02_graphical_models/04_adaptive_glasso
         title: Adaptive Graphical Lasso
       - file: chapters/02_graphical_models/05_interpretation
-        title: Networks Interpretation
+        title: Interpretation
 
   - file: chapters/03_logcontrast_models/01_data_preparation
     title: Log-Contrast Models
