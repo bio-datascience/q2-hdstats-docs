@@ -1,6 +1,6 @@
 # Classification: Predicting Vegetation
 
-This tutorial demonstrates how to predict vegetation presence using log-contrast classification with QIIME 2's classo plugin.
+This tutorial demonstrates how to predict vegetation presence using log-contrast classification.
 
 ## Overview
 
@@ -13,10 +13,10 @@ First, we train a log-contrast classifier using cross-validation to predict vege
 ```bash
 # Log-contrast classification with cross-validation
 qiime classo classify \
-    --i-features classify-xtraining.qza \
-    --i-c ccovariates.qza \
-    --i-weights wcovariates.qza \
-    --m-y-file atacama-sample-metadata.tsv \
+    --i-features data/classify-xtraining.qza \
+    --i-c data/ccovariates.qza \
+    --i-weights data/wcovariates.qza \
+    --m-y-file data/atacama-selected-covariates-veg.tsv \
     --m-y-column vegetation \
     --p-huber \
     --p-stabsel \
@@ -26,7 +26,7 @@ qiime classo classify \
     --p-stabsel-threshold 0.5 \
     --p-cv-seed 42 \
     --p-no-cv-one-se \
-    --o-result classifytaxa.qza
+    --o-result data/classifytaxa.qza
 ```
 
 **Parameters explained:**
@@ -45,9 +45,9 @@ Apply the trained model to test data:
 
 ```bash
 qiime classo predict \
-    --i-features classify-xtest.qza \
-    --i-problem classifytaxa.qza \
-    --o-predictions classify-predictions.qza
+    --i-features data/classify-xtest.qza \
+    --i-problem data/classifytaxa.qza \
+    --o-predictions data/classify-predictions.qza
 ```
 
 ## Step 3: Generate Summary Visualization
@@ -56,10 +56,12 @@ Create a comprehensive summary of the classification results:
 
 ```bash
 qiime classo summarize \
-    --i-problem classifytaxa.qza \
-    --i-taxa classification.qza \
-    --i-predictions classify-predictions.qza \
-    --o-visualization classifytaxa_C2.qzv
+    --i-problem data/classifytaxa.qza \
+    --i-taxa data/classification.qza \
+    --i-predictions data/classify-predictions.qza \
+    --o-visualization data/classifytaxa_C2.qzv
 ```
 
-The resulting visualization will show model performance metrics, selected features, and prediction accuracy.
+**Explanation:**
+- Generates an interactive QIIME 2 visualization of the estimated network.
+- The output `.qzv` file can be viewed using [QIIME 2 View](https://view.qiime2.org/).
