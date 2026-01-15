@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Regression: Predicting Temperature &#8212; High-dimensional Statistics with QIIME 2</title>
+    <title>Log-Contrast Models Overview &#8212; High-dimensional Statistics with QIIME 2</title>
   
   
   
@@ -58,11 +58,11 @@
     <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/03_logcontrast_models/02_regression';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapters/03_logcontrast_models/00_overview';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Classification: Predicting Vegetation" href="03_classification.html" />
-    <link rel="prev" title="Data Preparation" href="01_data_preparation.html" />
+    <link rel="next" title="Data Preparation" href="01_data_preparation.html" />
+    <link rel="prev" title="Network Interpretation and Analysis" href="../02_graphical_models/05_interpretation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -189,10 +189,20 @@
 <li class="toctree-l2"><a class="reference internal" href="../02_graphical_models/05_interpretation.html">Interpretation</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="01_data_preparation.html">Log-Contrast Models</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Regression</a></li>
-<li class="toctree-l2"><a class="reference internal" href="03_classification.html">Classification</a></li>
-<li class="toctree-l2"><a class="reference internal" href="04_interpretation.html">Interpretation</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Log-Contrast Models</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="01_data_preparation.html">Data Preparation</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="02_regression/00_index.html">Regression</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="02_regression/01_logcontrast.html">Log-Contrast</a></li>
+<li class="toctree-l3"><a class="reference internal" href="02_regression/02_trac.html">With TRAC</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="03_classification/00_index.html">Classification</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="03_classification/01_logcontrast.html">Log-Contrast</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_classification/02_trac.html">With TRAC</a></li>
+</ul>
+</details></li>
+<li class="toctree-l2"><a class="reference internal" href="04_advanced/01_concomitant_formulation.html">Advanced: Concomitant Formulation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_interpretation.html">Interpretation</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1"><a class="reference internal" href="../../references.html">References</a></li>
@@ -250,7 +260,7 @@
       
       
       
-      <li><a href="../../_sources/chapters/03_logcontrast_models/02_regression.md" target="_blank"
+      <li><a href="../../_sources/chapters/03_logcontrast_models/00_overview.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -334,7 +344,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Regression: Predicting Temperature</h1>
+    <h1>Log-Contrast Models Overview</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -344,9 +354,18 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-train-the-regression-model">Step 1: Train the Regression Model</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-make-predictions">Step 2: Make Predictions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-visualize-results">Step 3: Visualize Results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-log-contrast-models">What are Log-Contrast Models?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-organization">Chapter Organization</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preparation">1. Data Preparation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regression-models">2. Regression Models</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classification-models">3. Classification Models</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-topics">4. Advanced Topics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation">5. Interpretation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-concepts">Key Concepts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting Started</a></li>
 </ul>
             </nav>
         </div>
@@ -358,65 +377,89 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="regression-predicting-temperature">
-<h1>Regression: Predicting Temperature<a class="headerlink" href="#regression-predicting-temperature" title="Link to this heading">#</a></h1>
-<p>This tutorial demonstrates how to use log-contrast regression to predict average soil temperature from microbial community data. The regression model identifies which taxa are most predictive of temperature variations.</p>
-<section id="step-1-train-the-regression-model">
-<h2>Step 1: Train the Regression Model<a class="headerlink" href="#step-1-train-the-regression-model" title="Link to this heading">#</a></h2>
-<p>Use log-contrast regression with stability selection to identify the most stable predictive features:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Log-contrast regression with stability selection</span>
-qiime<span class="w"> </span>classo<span class="w"> </span>regress<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--i-features<span class="w"> </span>data/regress-xtraining.qza<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--i-c<span class="w"> </span>data/ccovariates.qza<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--i-weights<span class="w"> </span>data/wcovariates.qza<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--m-y-file<span class="w"> </span>data/atacama-selected-covariates-veg.tsv<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--m-y-column<span class="w"> </span>average-soil-temperature<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--p-concomitant<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--p-stabsel<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--p-cv<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--p-path<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--p-lamfixed<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--p-stabsel-threshold<span class="w"> </span><span class="m">0</span>.5<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--p-cv-seed<span class="w"> </span><span class="m">1</span><span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--p-no-cv-one-se<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--o-result<span class="w"> </span>data/regresstaxa.qza
-</pre></div>
-</div>
-<p>Key parameters:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="log-contrast-models-overview">
+<h1>Log-Contrast Models Overview<a class="headerlink" href="#log-contrast-models-overview" title="Link to this heading">#</a></h1>
+<p>Log-contrast models are powerful tools for analyzing compositional microbiome data while respecting the constrained nature of relative abundance data. This chapter covers both regression and classification tasks using log-contrast transformations.</p>
+<section id="what-are-log-contrast-models">
+<h2>What are Log-Contrast Models?<a class="headerlink" href="#what-are-log-contrast-models" title="Link to this heading">#</a></h2>
+<p>Compositional data (like microbiome relative abundances) sum to a constant and exist in a constrained space. Log-contrast models:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">--p-stabsel</span></code>: Enable stability selection for robust feature selection</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">--p-stabsel-threshold</span> <span class="pre">0.5</span></code>: Features selected in &gt;50% of subsamples</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">--p-cv</span></code>: Use cross-validation for model selection</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">--p-concomitant</span></code>: Include concomitant variables in the model</p></li>
+<li><p>Transform data using centered log-ratio (CLR) or other log-ratio transformations</p></li>
+<li><p>Apply regularized regression/classification in the transformed space</p></li>
+<li><p>Provide interpretable results in terms of relative abundance changes</p></li>
 </ul>
 </section>
-<section id="step-2-make-predictions">
-<h2>Step 2: Make Predictions<a class="headerlink" href="#step-2-make-predictions" title="Link to this heading">#</a></h2>
-<p>Apply the trained model to test data:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>qiime<span class="w"> </span>classo<span class="w"> </span>predict<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--i-features<span class="w"> </span>data/regress-xtest.qza<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--i-problem<span class="w"> </span>data/regresstaxa.qza<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--o-predictions<span class="w"> </span>data/regress-predictions.qza
-</pre></div>
-</div>
+<section id="chapter-organization">
+<h2>Chapter Organization<a class="headerlink" href="#chapter-organization" title="Link to this heading">#</a></h2>
+<p>This chapter is organized into the following sections:</p>
+<section id="data-preparation">
+<h3>1. Data Preparation<a class="headerlink" href="#data-preparation" title="Link to this heading">#</a></h3>
+<p>Learn how to transform your microbiome data and prepare it for log-contrast modeling.</p>
 </section>
-<section id="step-3-visualize-results">
-<h2>Step 3: Visualize Results<a class="headerlink" href="#step-3-visualize-results" title="Link to this heading">#</a></h2>
-<p>Generate a comprehensive summary of the regression results:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>qiime<span class="w"> </span>classo<span class="w"> </span>summarize<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--i-problem<span class="w"> </span>data/regresstaxa.qza<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--i-taxa<span class="w"> </span>data/classification.qza<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--i-predictions<span class="w"> </span>data/regress-predictions.qza<span class="w"> </span><span class="se">\</span>
-<span class="w">    </span>--o-visualization<span class="w"> </span>data/regresstaxa_R3.qzv
-</pre></div>
-</div>
-<p>The visualization will show selected taxa, model performance metrics, and prediction accuracy.</p>
-<p><strong>Explanation:</strong></p>
+<section id="regression-models">
+<h3>2. Regression Models<a class="headerlink" href="#regression-models" title="Link to this heading">#</a></h3>
+<p>Predict continuous outcomes (e.g., temperature, pH) from microbiome composition:</p>
 <ul class="simple">
-<li><p>Generates an interactive QIIME 2 visualization of the estimated network.</p></li>
-<li><p>The output <code class="docutils literal notranslate"><span class="pre">.qzv</span></code> file can be viewed using <a class="reference external" href="https://view.qiime2.org/">QIIME 2 View</a>.</p></li>
+<li><p><strong>Log-Contrast Regression</strong>: Basic approach using CLR transformation</p></li>
+<li><p><strong>TRAC</strong>: Incorporates taxonomic hierarchical information for better feature selection</p></li>
 </ul>
 </section>
+<section id="classification-models">
+<h3>3. Classification Models<a class="headerlink" href="#classification-models" title="Link to this heading">#</a></h3>
+<p>Predict categorical outcomes (e.g., disease status, habitat type):</p>
+<ul class="simple">
+<li><p><strong>Log-Contrast Classification</strong>: Basic approach for classification tasks</p></li>
+<li><p><strong>TRAC</strong>: Uses taxonomic structure to identify predictive taxonomic groups</p></li>
+</ul>
+</section>
+<section id="advanced-topics">
+<h3>4. Advanced Topics<a class="headerlink" href="#advanced-topics" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Concomitant Formulation</strong>: Joint estimation of coefficients and noise level for heteroscedastic data</p></li>
+</ul>
+</section>
+<section id="interpretation">
+<h3>5. Interpretation<a class="headerlink" href="#interpretation" title="Link to this heading">#</a></h3>
+<p>Understand how to interpret log-contrast model results and extract biological insights.</p>
+</section>
+</section>
+<section id="key-concepts">
+<h2>Key Concepts<a class="headerlink" href="#key-concepts" title="Link to this heading">#</a></h2>
+<p><strong>Log-Ratio Transformations</strong>: Convert compositional data to unrestricted space</p>
+<ul class="simple">
+<li><p>CLR (Centered Log-Ratio): Most common, centers data around geometric mean</p></li>
+<li><p>ALR (Additive Log-Ratio): Uses one component as reference</p></li>
+</ul>
+<p><strong>Regularization</strong>: Prevents overfitting in high-dimensional microbiome data</p>
+<ul class="simple">
+<li><p>L1 penalty (Lasso): Encourages sparsity, selects subset of features</p></li>
+<li><p>Stability selection: Identifies robust features across subsamples</p></li>
+</ul>
+<p><strong>Taxonomic Adaptivity (TRAC)</strong>: Leverages phylogenetic structure</p>
+<ul class="simple">
+<li><p>Computes adaptive weights based on taxonomic hierarchy</p></li>
+<li><p>Groups related taxa for more interpretable results</p></li>
+</ul>
+</section>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
+<p>Before working through this chapter, ensure you have:</p>
+<ul class="simple">
+<li><p>Completed the <a class="reference internal" href="../01_installation/01_prerequisites.html"><span class="std std-doc">Installation</span></a> section</p></li>
+<li><p>Familiarized yourself with the <a class="reference internal" href="../00_getting_started/02_data.html"><span class="std std-doc">Atacama dataset</span></a></p></li>
+<li><p>Basic understanding of regression and classification concepts</p></li>
+</ul>
+</section>
+<section id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">#</a></h2>
+<p>Begin with <a class="reference internal" href="01_data_preparation.html"><span class="std std-doc">Data Preparation</span></a> to learn how to transform and prepare your data, then choose your analysis path:</p>
+<ul class="simple">
+<li><p>For continuous outcomes → <a class="reference internal" href="02_regression/01_logcontrast.html"><span class="std std-doc">Regression</span></a></p></li>
+<li><p>For categorical outcomes → <a class="reference internal" href="03_classification/01_logcontrast.html"><span class="std std-doc">Classification</span></a></p></li>
+</ul>
+</section>
+<div class="toctree-wrapper compound">
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -450,20 +493,20 @@ qiime<span class="w"> </span>classo<span class="w"> </span>regress<span class="w
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="01_data_preparation.html"
+       href="../02_graphical_models/05_interpretation.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Data Preparation</p>
+        <p class="prev-next-title">Network Interpretation and Analysis</p>
       </div>
     </a>
     <a class="right-next"
-       href="03_classification.html"
+       href="01_data_preparation.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Classification: Predicting Vegetation</p>
+        <p class="prev-next-title">Data Preparation</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -483,9 +526,18 @@ qiime<span class="w"> </span>classo<span class="w"> </span>regress<span class="w
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-train-the-regression-model">Step 1: Train the Regression Model</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-make-predictions">Step 2: Make Predictions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-visualize-results">Step 3: Visualize Results</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-are-log-contrast-models">What are Log-Contrast Models?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#chapter-organization">Chapter Organization</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#data-preparation">1. Data Preparation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#regression-models">2. Regression Models</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classification-models">3. Classification Models</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-topics">4. Advanced Topics</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#interpretation">5. Interpretation</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-concepts">Key Concepts</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#getting-started">Getting Started</a></li>
 </ul>
   </nav></div>
 
