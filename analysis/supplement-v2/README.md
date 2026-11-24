@@ -1,3 +1,12 @@
+## Current Standalone Edition
+
+The Atacama, MAP mOTU, and cocoa input bundles are available through
+`docs/downloads`. A pinned Intel macOS installation and a single portable
+entry point for all 26 published figures were validated on 2026-11-24.
+See `standalone-completion/README.md` for scope and test records. The material
+below records the earlier migration history; its pending-release notes are
+superseded by this validation.
+
 # Supplement-to-Tutorial V2
 
 The retained LaTeX supplement is the scientific source of truth. `source/`

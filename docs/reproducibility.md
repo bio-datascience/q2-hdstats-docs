@@ -15,8 +15,28 @@ their contents; PNGs are rendered from those PDFs for browser display.
 | GGLasso | 0.3.1 |
 
 The c-lasso PyPI release is not a substitute for this audited GitHub revision.
-The numerical audit was an established-environment replay, not a clean-machine
-or cross-platform installation test.
+The scientific audit replayed the established environment. A subsequent test
+installed a new isolated Intel macOS environment and ran the published top-15
+and cocoa QIIME commands. This is not cross-platform or clean-hardware validation.
+
+## Install the Tutorial Environment
+
+Download the [tested Intel macOS installation bundle](downloads/tutorial-environment-osx64.zip)
+and extract it. With micromamba installed, run from the extracted directory:
+
+```bash
+micromamba create -n q2-hdstats-tutorial --file conda-osx-64-explicit.txt
+micromamba activate q2-hdstats-tutorial
+python -m pip install --no-deps --no-build-isolation -r requirements-plugins.txt
+python -m pip check
+qiime info
+```
+
+The explicit conda file is for **Intel macOS (`osx-64`)**. It is not a Linux or
+ARM-native environment file. The GitHub backend and plugin commits are pinned;
+the recipe does not substitute the PyPI c-lasso release. Keep this environment
+active for both QIIME commands and Python plotting. Conda package caching does
+not change the version pins. No existing working environment is modified.
 
 ## Reading the Commands
 
@@ -65,16 +85,25 @@ baselines, then review the tutorial adaptations.
 
 ## Optional Python Figures
 
-For the 15-ASV regression and classification examples, download the plotting ZIP
-linked in [Atacama top-15 ASV analysis](tutorial/s2-01.md). Extract it in your working
-directory and follow the collapsed **Reproduce the figures with Python** steps.
-The script reads the model and prediction artifacts created by the QIIME commands;
-it does not refit any model. It writes result tables, matched-style figures, and
-new provenance records in a separate output directory.
+The [complete plotting bundle](downloads/tutorial-figures.zip) provides a single
+portable entry point for all 26 published figures. Extract the archive, activate
+the tutorial environment, and run:
 
-The adapter reuses the established plotting functions. The original scripts are
-also retained in the reproduction archive. Portable adapters for the covariate,
-data heatmap, and network figures are not yet included in that download.
+```bash
+python plotting/reproduce_all_figures.py --case all --output-dir figures/all
+```
+
+Use `--case atacama`, `--case motus`, or `--case cocoa` for one case study.
+This reads the archived QIIME-derived artifacts and extracted tables, checks
+their hashes, and reuses the original plotting functions. It does not refit
+models. Original scripts are preserved; only path strings in temporary execution
+copies are relocated. Each output has a provenance JSON. The archive includes
+reference PDFs; the original website/Supplement figures remain unchanged.
+
+All 26 figures were regenerated in the isolated environment and compared with
+the Supplement. Their text and layout agree; minor font/raster rounding is
+recorded rather than claimed to be byte identity. The existing top-15 prediction
+plotting adapter remains available for models you generate from the walkthrough.
 
 ## Input Distribution
 
@@ -85,12 +114,12 @@ preparation helpers were tested in a clean working directory and retain the
 original scientific calculations. mOTU inputs were checked for consistent
 feature order, training support, and subject-disjoint splitting.
 
-These checks reuse the established QIIME environment; they are not a
-fresh-installation test. The historical Linux environment lock in `analysis/envs`
-predates the audited q2-classo backend and must not be used as a substitute for
-the source pins above. Public redistribution of the supplied Cocoa/Bracken
-artifacts still needs confirmation. Historical provenance paths identify audited
-sources, not download locations.
+The [cocoa/Bracken inputs](tutorial/s4.md) are also available with confirmed
+redistribution permission. The newly tested installation recipe above replaces
+the historical environment locks in `analysis/envs` for this tutorial edition.
+Those historical files are retained as provenance, not current instructions.
+Historical absolute paths identify audited sources; the download bundles and
+portable plotting entry point do not require access to those original paths.
 
 The statistical-background command examples are schematic, as in the supplement.
 Case-study commands require the matching prepared inputs and helper scripts;

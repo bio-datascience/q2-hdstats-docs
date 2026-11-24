@@ -1,0 +1,51 @@
+{
+  "description": "MOSHPIT cocoa/Bracken inputs used in the audited Supplement; no fitted models.",
+  "redistribution_permission": "User confirmed permission on 2026-11-24.",
+  "dimensions": {
+    "samples": 14,
+    "raw_features": 10927,
+    "features": 61,
+    "train": 10,
+    "test": 4
+  },
+  "filter": "present in all 14 samples and at least 50000 reads across all samples",
+  "split": "0-96 hours training; 120 and 144 hours held out for each bean variety",
+  "files": [
+    {
+      "file": "bracken-species-raw.qza",
+      "source_path": "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/bracken-beans/artifacts/bracken-species-raw.qza",
+      "sha256": "f285224b4ccba5cf7912e5d72903c036b13c2bb4d73f65c18f3635d94af75523",
+      "bytes": 4016575
+    },
+    {
+      "file": "bracken-species-taxonomy.qza",
+      "source_path": "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/bracken-beans/artifacts/bracken-species-taxonomy.qza",
+      "sha256": "5bdf12fd58b068d0a36b7bdd4eff12ed61c57b6796dae11ccac2d9f1a8435f96",
+      "bytes": 3793994
+    },
+    {
+      "file": "bracken-species-prev14-total50k.qza",
+      "source_path": "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/bracken-beans/artifacts/bracken-species-prev14-total50k.qza",
+      "sha256": "3cf934c05ffbf2691564bd4fdb7dd4da65515922e48934c38db29c482ea5e353",
+      "bytes": 3604148
+    },
+    {
+      "file": "bracken-species-prev14-total50k-train.qza",
+      "source_path": "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/bracken-beans/artifacts/bracken-species-prev14-total50k-train.qza",
+      "sha256": "e3b5c097176df81d96474a7ed9880193e490edc9d8b0748de027ba54df0dfc95",
+      "bytes": 3609030
+    },
+    {
+      "file": "bracken-species-prev14-total50k-test.qza",
+      "source_path": "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/bracken-beans/artifacts/bracken-species-prev14-total50k-test.qza",
+      "sha256": "75518832fb828bb8a2a6bbd6238108e7e2cb8d5fddc810dbbac53dee51470820",
+      "bytes": 3606238
+    },
+    {
+      "file": "metadata.tsv",
+      "source_path": "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/bracken-beans/metadata.tsv",
+      "sha256": "c44dce33e2aad10300247d6d63ede90ee29772291c919c2145a74123e97c9c41",
+      "bytes": 495
+    }
+  ]
+}

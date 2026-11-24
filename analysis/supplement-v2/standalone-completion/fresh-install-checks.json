@@ -1,0 +1,559 @@
+[
+  {
+    "stage": "pip-check",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/python",
+      "-m",
+      "pip",
+      "check"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "qiime-info",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "info"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "atacama-top15-01",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "feature-table",
+      "filter-samples",
+      "--i-table",
+      "atacama-top15-prevalence-53-table.qza",
+      "--m-metadata-file",
+      "train-test-split-53-q2.tsv",
+      "--p-where",
+      "[split]='train'",
+      "--p-no-filter-empty-features",
+      "--o-filtered-table",
+      "atacama-top15-train-53-table.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "atacama-top15-02",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "feature-table",
+      "filter-samples",
+      "--i-table",
+      "atacama-top15-prevalence-53-table.qza",
+      "--m-metadata-file",
+      "train-test-split-53-q2.tsv",
+      "--p-where",
+      "[split]='test'",
+      "--p-no-filter-empty-features",
+      "--o-filtered-table",
+      "atacama-top15-test-53-table.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "atacama-top15-03",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "classo",
+      "transform-features",
+      "--i-features",
+      "atacama-top15-prevalence-53-table.qza",
+      "--o-x",
+      "atacama-top15-53-q2-classo-clr-coef05.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "atacama-top15-04",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "classo",
+      "transform-features",
+      "--i-features",
+      "atacama-top15-train-53-table.qza",
+      "--o-x",
+      "atacama-top15-train-53-clr.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "atacama-top15-05",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "classo",
+      "transform-features",
+      "--i-features",
+      "atacama-top15-test-53-table.qza",
+      "--o-x",
+      "atacama-top15-test-53-clr.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "atacama-top15-06",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "gglasso",
+      "transform-features",
+      "--i-table",
+      "atacama-top15-prevalence-53-table.qza",
+      "--i-taxonomy",
+      "atacama-taxonomy.qza",
+      "--p-transformation",
+      "mclr",
+      "--o-transformed-table",
+      "atacama-top15-53-mclr.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "atacama-top15-07",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "classo",
+      "regress",
+      "--i-features",
+      "atacama-top15-train-53-clr.qza",
+      "--m-y-file",
+      "elevation-train-53-metadata-q2.tsv",
+      "--m-y-column",
+      "elevation",
+      "--p-no-path",
+      "--p-no-stabsel",
+      "--p-no-lamfixed",
+      "--o-result",
+      "atacama-top15-elevation-r3-cv.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "atacama-top15-08",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "classo",
+      "predict",
+      "--i-features",
+      "atacama-top15-test-53-clr.qza",
+      "--i-problem",
+      "atacama-top15-elevation-r3-cv.qza",
+      "--o-predictions",
+      "atacama-top15-elevation-r3-test-predictions.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "atacama-top15-09",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "classo",
+      "predict",
+      "--i-features",
+      "atacama-top15-train-53-clr.qza",
+      "--i-problem",
+      "atacama-top15-elevation-r3-cv.qza",
+      "--o-predictions",
+      "atacama-top15-elevation-r3-cv-train-predictions.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "atacama-top15-10",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "classo",
+      "summarize",
+      "--i-problem",
+      "atacama-top15-elevation-r3-cv.qza",
+      "--i-predictions",
+      "atacama-top15-elevation-r3-test-predictions.qza",
+      "--i-taxa",
+      "atacama-taxonomy.qza",
+      "--o-visualization",
+      "atacama-top15-elevation-r3-cv-summary.qzv"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "atacama-top15-11",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "classo",
+      "regress",
+      "--i-features",
+      "atacama-top15-train-53-clr.qza",
+      "--m-y-file",
+      "elevation-train-53-metadata-q2.tsv",
+      "--m-y-column",
+      "elevation",
+      "--p-no-path",
+      "--p-no-cv",
+      "--p-no-lamfixed",
+      "--p-stabsel-seed",
+      "1",
+      "--p-stabsel-b",
+      "100",
+      "--p-stabsel-q",
+      "4",
+      "--p-stabsel-threshold",
+      "0.3333333333333333",
+      "--o-result",
+      "atacama-top15-elevation-r3-stabsel-q4-b100-threshold-third.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "atacama-top15-12",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "classo",
+      "predict",
+      "--i-features",
+      "atacama-top15-test-53-clr.qza",
+      "--i-problem",
+      "atacama-top15-elevation-r3-stabsel-q4-b100-threshold-third.qza",
+      "--o-predictions",
+      "atacama-top15-elevation-r3-stabsel-threshold-third-test-predictions.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "atacama-top15-13",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "classo",
+      "predict",
+      "--i-features",
+      "atacama-top15-train-53-clr.qza",
+      "--i-problem",
+      "atacama-top15-elevation-r3-stabsel-q4-b100-threshold-third.qza",
+      "--o-predictions",
+      "atacama-top15-elevation-r3-stabsel-threshold-third-train-predictions.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "atacama-top15-14",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "classo",
+      "regress",
+      "--i-features",
+      "atacama-top15-train-53-clr.qza",
+      "--m-y-file",
+      "elevation-train-53-metadata-q2.tsv",
+      "--m-y-column",
+      "elevation",
+      "--p-no-path",
+      "--p-no-stabsel",
+      "--p-no-lamfixed",
+      "--p-no-concomitant",
+      "--o-result",
+      "atacama-top15-elevation-r1-cv.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "atacama-top15-15",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "classo",
+      "classify",
+      "--i-features",
+      "atacama-top15-train-53-clr.qza",
+      "--m-y-file",
+      "vegetation-train-53-metadata-q2.tsv",
+      "--m-y-column",
+      "vegetation",
+      "--p-no-path",
+      "--p-no-stabsel",
+      "--p-no-lamfixed",
+      "--o-result",
+      "atacama-top15-vegetation-classification-cv.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "atacama-top15-16",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "classo",
+      "predict",
+      "--i-features",
+      "atacama-top15-test-53-clr.qza",
+      "--i-problem",
+      "atacama-top15-vegetation-classification-cv.qza",
+      "--o-predictions",
+      "atacama-top15-vegetation-classification-cv-test-predictions.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "atacama-top15-17",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "classo",
+      "predict",
+      "--i-features",
+      "atacama-top15-train-53-clr.qza",
+      "--i-problem",
+      "atacama-top15-vegetation-classification-cv.qza",
+      "--o-predictions",
+      "atacama-top15-vegetation-classification-cv-train-predictions.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "atacama-top15-18",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "classo",
+      "summarize",
+      "--i-problem",
+      "atacama-top15-vegetation-classification-cv.qza",
+      "--i-predictions",
+      "atacama-top15-vegetation-classification-cv-test-predictions.qza",
+      "--i-taxa",
+      "atacama-taxonomy.qza",
+      "--o-visualization",
+      "atacama-top15-vegetation-classification-cv-summary.qzv"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "atacama-top15-19",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "gglasso",
+      "calculate-covariance",
+      "--i-table",
+      "atacama-top15-53-mclr.qza",
+      "--o-covariance-matrix",
+      "atacama-top15-53-mclr-correlation.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "atacama-top15-20",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "gglasso",
+      "solve-problem",
+      "--i-covariance-matrix",
+      "atacama-top15-53-mclr-correlation.qza",
+      "--p-n-samples",
+      "53",
+      "--p-no-latent",
+      "--p-lambda1-path",
+      "1.0",
+      "0.9",
+      "0.8",
+      "0.7",
+      "0.6",
+      "0.5",
+      "0.4",
+      "0.3",
+      "0.2",
+      "0.15",
+      "0.1",
+      "0.075",
+      "0.05",
+      "0.035",
+      "0.025",
+      "0.015",
+      "0.01",
+      "--o-solution",
+      "atacama-top15-53-sgl-ebic-gamma001.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "atacama-top15-21",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "gglasso",
+      "transform-features",
+      "--i-table",
+      "atacama-top15-prevalence-53-table.qza",
+      "--i-taxonomy",
+      "atacama-taxonomy.qza",
+      "--m-sample-metadata-file",
+      "atacama-top15-53-curated-metadata-for-gglasso.tsv",
+      "--p-transformation",
+      "mclr",
+      "--p-add-metadata",
+      "--o-transformed-table",
+      "atacama-top15-53-mclr-with-curated-covariates.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "atacama-top15-22",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "gglasso",
+      "calculate-covariance",
+      "--i-table",
+      "atacama-top15-53-mclr-with-curated-covariates.qza",
+      "--o-covariance-matrix",
+      "atacama-top15-53-mclr-curated-covariate-correlation.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "atacama-top15-23",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "gglasso",
+      "solve-problem",
+      "--i-covariance-matrix",
+      "atacama-top15-53-mclr-curated-covariate-correlation.qza",
+      "--p-n-samples",
+      "53",
+      "--p-no-latent",
+      "--p-lambda1-path",
+      "1.0",
+      "0.9",
+      "0.8",
+      "0.7",
+      "0.6",
+      "0.5",
+      "0.4",
+      "0.3",
+      "0.2",
+      "0.15",
+      "0.1",
+      "0.075",
+      "0.05",
+      "0.035",
+      "0.025",
+      "0.015",
+      "0.01",
+      "--p-weights",
+      "elevation",
+      "0.05",
+      "ph",
+      "0.05",
+      "average-soil-relative-humidity",
+      "0.05",
+      "average-soil-temperature",
+      "0.05",
+      "percentcover",
+      "0.05",
+      "log10-extract-concen",
+      "0.05",
+      "--o-solution",
+      "atacama-top15-53-mixed-curated-covariates-weight005-ebic-gamma001.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "atacama-top15-24",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "gglasso",
+      "solve-problem",
+      "--i-covariance-matrix",
+      "atacama-top15-53-mclr-correlation.qza",
+      "--p-n-samples",
+      "53",
+      "--p-latent",
+      "--p-lambda1-path",
+      "1.0",
+      "0.9",
+      "0.8",
+      "0.7",
+      "0.6",
+      "0.5",
+      "0.4",
+      "0.3",
+      "0.2",
+      "0.15",
+      "0.1",
+      "0.075",
+      "0.05",
+      "0.035",
+      "0.025",
+      "0.015",
+      "0.01",
+      "--p-mu1-path",
+      "5.0",
+      "3.0",
+      "2.0",
+      "1.5",
+      "1.0",
+      "0.75",
+      "0.5",
+      "0.3",
+      "0.2",
+      "0.1",
+      "--o-solution",
+      "atacama-top15-53-slr-ebic-gamma001-mu-grid.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "cocoa-01",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "classo",
+      "transform-features",
+      "--i-features",
+      "bracken-species-prev14-total50k-train.qza",
+      "--o-x",
+      "bracken-species-prev14-total50k-train-clr05.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "cocoa-02",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "classo",
+      "transform-features",
+      "--i-features",
+      "bracken-species-prev14-total50k-test.qza",
+      "--o-x",
+      "bracken-species-prev14-total50k-test-clr05.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "cocoa-03",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "classo",
+      "classify",
+      "--i-features",
+      "bracken-species-prev14-total50k-train-clr05.qza",
+      "--m-y-file",
+      "metadata.tsv",
+      "--m-y-column",
+      "bean_type",
+      "--p-no-path",
+      "--p-no-stabsel",
+      "--p-huber",
+      "--p-no-refit",
+      "--o-result",
+      "bracken-bean-type-train-clr05-c2-rho0-cv-no-refit-pr60.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "stage": "cocoa-04",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "classo",
+      "predict",
+      "--i-features",
+      "bracken-species-prev14-total50k-test-clr05.qza",
+      "--i-problem",
+      "bracken-bean-type-train-clr05-c2-rho0-cv-no-refit-pr60.qza",
+      "--o-predictions",
+      "bracken-bean-type-train-clr05-c2-rho0-cv-no-refit-pr60-test-predictions.qza"
+    ],
+    "returncode": 0
+  }
+]

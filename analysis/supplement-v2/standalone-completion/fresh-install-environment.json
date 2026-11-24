@@ -1,0 +1,16 @@
+{
+  "python": "3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 16:51:19) [Clang 19.1.7 ]",
+  "packages": {
+    "qiime2": "2026.7.0",
+    "c-lasso": "1.0.11+56.gd22da8d",
+    "q2-classo": "0.0.1+148.gae574af",
+    "q2-gglasso": "0+untagged.447.g3f586aa",
+    "gglasso": "0.3.1",
+    "numpy": "2.4.2",
+    "scipy": "1.17.1",
+    "matplotlib": "3.10.8",
+    "setuptools": "80.9.0",
+    "tomlkit": "0.13.3"
+  },
+  "scope": "New isolated Intel macOS environment; source-pinned plugin installation, pip check, complete published top15 QIIME commands, and cocoa classification commands."
+}

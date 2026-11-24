@@ -1,0 +1,245 @@
+[
+  {
+    "page": "s2-02",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "classo",
+      "add-covariates",
+      "--i-features",
+      "atacama-top300-test-53-clr.qza",
+      "--i-c",
+      "top300-zero-sum-constraint.qza",
+      "--i-weights",
+      "top300-unit-weights.qza",
+      "--m-covariates-file",
+      "top300-elevation-augmented-covariates-normalized-from-train.tsv",
+      "--p-to-add",
+      "asvscaled-log10-extract-concen",
+      "--p-no-rescale",
+      "--p-w-to-add",
+      "1.0",
+      "--p-to-add",
+      "asvscaled-ph",
+      "--p-no-rescale",
+      "--p-w-to-add",
+      "1.0",
+      "--p-to-add",
+      "asvscaled-ec",
+      "--p-no-rescale",
+      "--p-w-to-add",
+      "1.0",
+      "--p-to-add",
+      "asvscaled-log10-amplicon-concentration",
+      "--p-no-rescale",
+      "--p-w-to-add",
+      "1.0",
+      "--p-to-add",
+      "asvscaled-toc",
+      "--p-no-rescale",
+      "--p-w-to-add",
+      "1.0",
+      "--p-to-add",
+      "asvscaled-depth",
+      "--p-no-rescale",
+      "--p-w-to-add",
+      "1.0",
+      "--o-new-features",
+      "atacama-top300-test-53-clr-plus-asvscaled-covariates-equalweights.qza",
+      "--o-new-c",
+      "top300-plus-asvscaled-covariates-equalweights-test-constraint.qza",
+      "--o-new-w",
+      "top300-plus-asvscaled-covariates-equalweights-test-weights.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "page": "s2-02",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "classo",
+      "predict",
+      "--i-features",
+      "atacama-top300-train-53-clr.qza",
+      "--i-problem",
+      "atacama-top300-elevation-asv-only-r3-cv.qza",
+      "--o-predictions",
+      "atacama-top300-elevation-asv-only-r3-train-predictions.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "page": "s2-02",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "classo",
+      "predict",
+      "--i-features",
+      "atacama-top300-test-53-clr.qza",
+      "--i-problem",
+      "atacama-top300-elevation-asv-only-r3-cv.qza",
+      "--o-predictions",
+      "atacama-top300-elevation-asv-only-r3-test-predictions.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "page": "s2-02",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "classo",
+      "predict",
+      "--i-features",
+      "atacama-top300-train-53-clr-plus-asvscaled-covariates-equalweights.qza",
+      "--i-problem",
+      "atacama-top300-elevation-covariate-augmented-equalweights-r3-cv.qza",
+      "--o-predictions",
+      "atacama-top300-elevation-covariate-augmented-equalweights-r3-train-predictions.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "page": "s2-02",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "classo",
+      "predict",
+      "--i-features",
+      "atacama-top300-test-53-clr-plus-asvscaled-covariates-equalweights.qza",
+      "--i-problem",
+      "atacama-top300-elevation-covariate-augmented-equalweights-r3-cv.qza",
+      "--o-predictions",
+      "atacama-top300-elevation-covariate-augmented-equalweights-r3-test-predictions.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "page": "s3-01",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "classo",
+      "predict",
+      "--i-features",
+      "motus-clr-train.qza",
+      "--i-problem",
+      "motus-age-slc-r3.qza",
+      "--o-predictions",
+      "motus-age-slc-r3-train-predictions.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "page": "s3-01",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "classo",
+      "add-taxa",
+      "--i-features",
+      "motus-clr-test.qza",
+      "--i-taxa",
+      "motus-taxonomy.qza",
+      "--o-x",
+      "motus-clr-trac-test.qza",
+      "--o-aweights",
+      "motus-trac-test-weights.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "page": "s3-01",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "classo",
+      "predict",
+      "--i-features",
+      "motus-clr-trac-train.qza",
+      "--i-problem",
+      "motus-age-trac-r3.qza",
+      "--o-predictions",
+      "motus-age-trac-r3-train-predictions.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "page": "s3-01",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "classo",
+      "predict",
+      "--i-features",
+      "motus-clr-trac-test.qza",
+      "--i-problem",
+      "motus-age-trac-r3.qza",
+      "--o-predictions",
+      "motus-age-trac-r3-test-predictions.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "page": "s4",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "feature-table",
+      "filter-features",
+      "--i-table",
+      "bracken-species-raw.qza",
+      "--p-min-samples",
+      "14",
+      "--p-min-frequency",
+      "50000",
+      "--o-filtered-table",
+      "cocoa-filtered.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "page": "s4",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "feature-table",
+      "filter-samples",
+      "--i-table",
+      "cocoa-filtered.qza",
+      "--m-metadata-file",
+      "metadata.tsv",
+      "--p-where",
+      "[analysis_set]='train'",
+      "--p-no-filter-empty-features",
+      "--o-filtered-table",
+      "cocoa-train.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "page": "s4",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "feature-table",
+      "filter-samples",
+      "--i-table",
+      "cocoa-filtered.qza",
+      "--m-metadata-file",
+      "metadata.tsv",
+      "--p-where",
+      "[analysis_set]='test'",
+      "--p-no-filter-empty-features",
+      "--o-filtered-table",
+      "cocoa-test.qza"
+    ],
+    "returncode": 0
+  },
+  {
+    "page": "s4-01",
+    "command": [
+      "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/qiime-env/bin/qiime",
+      "classo",
+      "predict",
+      "--i-features",
+      "bracken-species-prev14-total50k-train-clr05.qza",
+      "--i-problem",
+      "bracken-bean-type-train-clr05-c2-rho0-cv-no-refit-pr60.qza",
+      "--o-predictions",
+      "bracken-bean-type-train-clr05-c2-rho0-cv-no-refit-pr60-train-predictions.qza"
+    ],
+    "returncode": 0
+  }
+]

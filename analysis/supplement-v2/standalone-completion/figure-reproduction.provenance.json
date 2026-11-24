@@ -1,0 +1,450 @@
+{
+  "source_manifest_sha256": "5779179a4a00cd40a883a5b88fedad4d216979bd67af432b5ff1033d689a5406",
+  "python": "3.12.13 | packaged by conda-forge | (main, Mar  5 2026, 16:51:19) [Clang 19.1.7 ]",
+  "model_fitting": false,
+  "source_files_verified": 268,
+  "generators": [
+    {
+      "file": "snapshot/canonical/outputs/fresh-atacama-workflow/tutorial-figure-generation/run_top300_classo_with_provenance.py",
+      "original_sha256": "cddcb5d45f6a1b2770b21356a69b00c12097f4139834fe9cf8eec731a4c836e4",
+      "execution_sha256": "07d425be0647e0ad546d657728fc556143db8572846289e33c5095ef44504209",
+      "change": "AST string constants containing original source-root paths only."
+    },
+    {
+      "file": "snapshot/canonical/outputs/fresh-atacama-workflow/tutorial-figure-generation/provenance_utils.py",
+      "original_sha256": "716f92b7d8af002c390972969ca7dd296bfb07077afdd3f17d3a7e52303baa18",
+      "execution_sha256": "ebfc3d9d00782a9cf6c7056b4d5eb77d496f7d8fbd87f7220b7141244877e7db",
+      "change": "AST string constants containing original source-root paths only."
+    },
+    {
+      "file": "snapshot/canonical/outputs/fresh-atacama-workflow/tutorial-figure-generation/tutorial_plotting.py",
+      "original_sha256": "c9c40ccb24e59ffca9f21b9e7f119d44b2bcc72a7bdc8d9340fc05a4bcc8a9d2",
+      "execution_sha256": "a9a41d74648e6c2bbded623304dcb1d9a0903007224574787c763a4b5b3a9fbe",
+      "change": "AST string constants containing original source-root paths only."
+    },
+    {
+      "file": "snapshot/canonical/outputs/fresh-atacama-workflow/tutorial-figure-generation/replot_first_three.py",
+      "original_sha256": "1915bb8c4ab0ab2d7f824f554038de5a435588e2a9f98672d2f3285140560f50",
+      "execution_sha256": "5f7c6d04276b4392dc55b2db1c0180a92e0886b4f7ccb6f470e07989374182c9",
+      "change": "AST string constants containing original source-root paths only."
+    },
+    {
+      "file": "snapshot/canonical/outputs/fresh-atacama-workflow/tutorial-figure-generation/plot_top15_classo_matched_style.py",
+      "original_sha256": "b7becae59c03d813e4eee588404fc6e8372faaa36a11f495bb8412995bde33f3",
+      "execution_sha256": "2bfac5921ac125c96708479cc35eff54fa89bc3e6a3a155d2c2cd364fb3de992",
+      "change": "AST string constants containing original source-root paths only."
+    },
+    {
+      "file": "snapshot/canonical/outputs/fresh-atacama-workflow/q2-classo-top300/prepare_top300_inputs.py",
+      "original_sha256": "580950699f74d312e53abaac22f5b384679d8da4158399aa1c69c832b4b40411",
+      "execution_sha256": "be66eadc82a9c21b50c521cf61da374e62ffa1f04f2123a91fe4a2ff2103f229",
+      "change": "AST string constants containing original source-root paths only."
+    },
+    {
+      "file": "snapshot/canonical/outputs/fresh-atacama-workflow/q2-classo-top300/plot_top300_vegetation_classification.py",
+      "original_sha256": "e3b0b8d3d7f652ea7d69b399b2b92cc315c33e470ef18a19971d6d11d6d33c3d",
+      "execution_sha256": "40d58c3477fc2b117b6d7242357c49c61fef981507a60bf04615f6b5efae00c9",
+      "change": "AST string constants containing original source-root paths only."
+    },
+    {
+      "file": "snapshot/canonical/outputs/fresh-atacama-workflow/q2-classo-top300/extract_top300_classo_qiime_results.py",
+      "original_sha256": "186645b3398e340268379fea302e69ed9db8ebca4e560c05cc56de3362fd3d52",
+      "execution_sha256": "7598005a2049514625115a52449f2b5f940193827e083901a6ab8a46fe98fce1",
+      "change": "AST string constants containing original source-root paths only."
+    },
+    {
+      "file": "snapshot/canonical/outputs/fresh-atacama-workflow/q2-classo-top300/create_classo_constraint_weights.py",
+      "original_sha256": "929e4fd50d6280d0317545068c3a41490a0d349d711b936082e9d98fba818095",
+      "execution_sha256": "846b82b3cae46046f1e267d53cb188ebaf96104715a401c673373f8084fa13ab",
+      "change": "AST string constants containing original source-root paths only."
+    },
+    {
+      "file": "snapshot/canonical/outputs/fresh-atacama-workflow/q2-classo-top300/plot_top300_vegetation_classification_matched_style.py",
+      "original_sha256": "83f96d64e298e82a005c8cc872a06d21adc27794b5ce286dd284014f81bab4be",
+      "execution_sha256": "38a6a974370fb89e7ddc0d8edad400bd1263ed8d1bf65c8d70015d96d8f8da0d",
+      "change": "AST string constants containing original source-root paths only."
+    },
+    {
+      "file": "snapshot/canonical/outputs/fresh-atacama-workflow/q2-classo-top300/plot_top300_classo_elevation_matched_style.py",
+      "original_sha256": "dbb62cfa7d5aaeeb2c9ec16fbd8e2bd66528240d36e1c63d3d046daf4661a87a",
+      "execution_sha256": "c18208b7e455bfc7d8fbf3e940c09c86b081acd341e50de47e04f965080c94cd",
+      "change": "AST string constants containing original source-root paths only."
+    },
+    {
+      "file": "snapshot/canonical/outputs/fresh-atacama-workflow/q2-classo-top300/plot_top300_r3_honest_minmse.py",
+      "original_sha256": "efaaf4fa669629080a6382444b66301c7fc4297bac7a5bd503a0e7d03bfac90b",
+      "execution_sha256": "87cebc7f4c39ece3f48d881c9b3ce073c862f607eedf883cc919b2ff27d38adf",
+      "change": "AST string constants containing original source-root paths only."
+    },
+    {
+      "file": "snapshot/canonical/outputs/fresh-atacama-workflow/q2-gglasso-top15/plot_top15_gglasso_qiime_figures.py",
+      "original_sha256": "a918b81a6f6fa1b021a4c5d4135134e61002bd803edbf2c79c10482c342b572c",
+      "execution_sha256": "c9c64e6bd94ca59b0c32445fcfa2d3f5d096bfe428d1e843f5072c2020ecccc3",
+      "change": "AST string constants containing original source-root paths only."
+    },
+    {
+      "file": "snapshot/canonical/outputs/fresh-atacama-workflow/q2-gglasso-top15/extract_top15_gglasso_qiime_results.py",
+      "original_sha256": "c8f6f3a28ffd1a75513674925bcc84f319442536c35d4972122ba013e76b1bf0",
+      "execution_sha256": "f86be775c472e66a788a70996b44a1320960fa9188ea0c620f69391771fe1687",
+      "change": "AST string constants containing original source-root paths only."
+    },
+    {
+      "file": "snapshot/canonical/outputs/fresh-atacama-workflow/q2-gglasso-top300/extract_top300_sgl_qiime_results.py",
+      "original_sha256": "c5386750d205ae6b90755701c28451eee83eee226e67e3f5c9e0496ccebb4c53",
+      "execution_sha256": "cb2fa9a9f2fd5e893ca5c6b540879a6cf03e5d4cdef9385a2f0dbb4d88bb0c87",
+      "change": "AST string constants containing original source-root paths only."
+    },
+    {
+      "file": "snapshot/canonical/outputs/fresh-atacama-workflow/q2-gglasso-top300/plot_top300_gglasso_reduced_matrices.py",
+      "original_sha256": "fea942d18fdeb3b8e134af0bc99c74ad2bfa5774330a6faecf8157fe4028ada0",
+      "execution_sha256": "9c3cfac72d5a219a1557f8034b3e055849580e7be5a1b383626ef09c415fb4f2",
+      "change": "AST string constants containing original source-root paths only."
+    },
+    {
+      "file": "snapshot/canonical/outputs/fresh-atacama-workflow/q2-gglasso-top300/extract_top300_gglasso_qiime_results.py",
+      "original_sha256": "e3962a70d17053404c7d17bc6caaa4d29669e832c5953b06dcc0f86132030893",
+      "execution_sha256": "0097913a877d2c1a022b5cb34525a8775b8fb0a1204f07d8dd75f598704b64d1",
+      "change": "AST string constants containing original source-root paths only."
+    },
+    {
+      "file": "snapshot/canonical/outputs/fresh-atacama-workflow/q2-gglasso-top300/plot_top300_slr_robust_pca_qiime_export_summary.py",
+      "original_sha256": "675d3a53dbdde5ee7a6de09041b4d0689c4becfe29d0973a68dcbee77e95b496",
+      "execution_sha256": "031e4fa2a41f3e062a9628ab013c9636bdf5ea4349139152787dc222406b9307",
+      "change": "AST string constants containing original source-root paths only."
+    },
+    {
+      "file": "snapshot/canonical/outputs/fresh-atacama-workflow/q2-gglasso-top300/prepare_top300_gglasso_metadata.py",
+      "original_sha256": "8925675af5151a0d5ee0ba72d4f90558eb7d340492118dc3a6f24befdad41ecc",
+      "execution_sha256": "e80bd93bc1c74c9526afc6ff92b43b3edc4333a00ecf149ca05b21a69dbc499f",
+      "change": "AST string constants containing original source-root paths only."
+    },
+    {
+      "file": "snapshot/canonical/outputs/fresh-atacama-workflow/q2-classo-top15/plot_top15_classo_qiime_figures.py",
+      "original_sha256": "eaeb471d499dc5b20ee36b3442948b3298205f5ef585d11ece3bf50c8528ce81",
+      "execution_sha256": "d3e4762e4a797c6d619251f7cbb66b49b89e14b21eae2306d9c922556dcbfe5c",
+      "change": "AST string constants containing original source-root paths only."
+    },
+    {
+      "file": "snapshot/canonical/outputs/fresh-atacama-workflow/q2-classo-top15/extract_top15_classo_qiime_results.py",
+      "original_sha256": "7991abfaf85e4b1404c05a39d72cbdfe8289bc38e2d56fabb036cfdcad44cf30",
+      "execution_sha256": "b9cc0002bc3a340a30b99ab183e9fb67e9c908e82f4d41db89c95c56d55ba07a",
+      "change": "AST string constants containing original source-root paths only."
+    },
+    {
+      "file": "snapshot/audit-project/outputs/run_top15_stabsel_third.py",
+      "original_sha256": "970f80422eb0d48c6a23e95c01ba2435805f6db048f8bd67dbf3c276b5bf6783",
+      "execution_sha256": "aebaee746e16f20a21efd99e4c5a31ba8beaa1c60c9863f7dd04d38fa063a004",
+      "change": "AST string constants containing original source-root paths only."
+    },
+    {
+      "file": "snapshot/audit-project/outputs/tutorial-figure-generation/tutorial_plotting.py",
+      "original_sha256": "580cf110a78dceb02143da3f8de81ef50bb9300c6a6e7c8a588bfc603bb45bf4",
+      "execution_sha256": "ee513f732c94f596fa25e1ee70dd78084a625a91e97eea8c4262aa08e9fe5123",
+      "change": "AST string constants containing original source-root paths only."
+    },
+    {
+      "file": "snapshot/audit-project/outputs/bracken-beans/scripts/prepare_temporal_covariate.py",
+      "original_sha256": "8275aab52ff358835d3c996eb9c7051944b19122a27e47141b1181ee0c0ba5a4",
+      "execution_sha256": "72c3e8e5605e4657be406af1858fb5f0e525876d083455d368851033d15708c8",
+      "change": "AST string constants containing original source-root paths only."
+    },
+    {
+      "file": "snapshot/audit-project/outputs/bracken-beans/scripts/plot_bracken_bean_classification_figures.py",
+      "original_sha256": "97c05fe947f824cca4cdd46234fe5eef2b8b0b5cdf2393b7180ead1be3e8fcf3",
+      "execution_sha256": "f7253d8734ae79b989c14fc1d4841e25a26ce4b68b4dc9acfff53a5b156a51e7",
+      "change": "AST string constants containing original source-root paths only."
+    },
+    {
+      "file": "snapshot/audit-project/outputs/bracken-beans/scripts/plot_bracken_final_classification.py",
+      "original_sha256": "e00e95928c495e50501c213422507228dcdb8f23e23a326bf740e66f2ea567b6",
+      "execution_sha256": "e9a1c608c87a3b8c07e3e3909e954dbb84662a729c692d9e66e1647ad4eaea57",
+      "change": "AST string constants containing original source-root paths only."
+    },
+    {
+      "file": "snapshot/audit-project/outputs/motus-merged/scripts/plot_motus_lowrank_covariates.py",
+      "original_sha256": "fe46db4718b335688f8f0aa61aabb0f5c88fbbf1a8f56670cee6f17230d51615",
+      "execution_sha256": "f85d402ac14ee781931397169f76fb38e8f4e54a83cd589bddd2aa1d148f6dbf",
+      "change": "AST string constants containing original source-root paths only."
+    },
+    {
+      "file": "snapshot/audit-project/outputs/motus-merged/scripts/prepare_complete_motus_inputs.py",
+      "original_sha256": "d40d03883cf3d5b486f5e444b7eec4775cc5aef5a5bb2c6f51e7635713054455",
+      "execution_sha256": "09a4e2e1f33070281e5656e9b0fa0369f7262175f1703c36595ca14581af7532",
+      "change": "AST string constants containing original source-root paths only."
+    },
+    {
+      "file": "snapshot/audit-project/outputs/motus-merged/scripts/plot_motus_slc_trac_tutorial_figures.py",
+      "original_sha256": "e90a5894bb710d294fa05e0489808a4b553631fe7d427dbe2cc520eaa040ab9c",
+      "execution_sha256": "99716e54ae7a1fef309c969f73dbc521d31abc3fc0eb10e34309c7a4d3721009",
+      "change": "AST string constants containing original source-root paths only."
+    },
+    {
+      "file": "snapshot/audit-project/outputs/motus-merged/scripts/plot_motus_gglasso_tutorial_figures.py",
+      "original_sha256": "1be34a0b7a958d49cfea609a127d919e963b1b3fe94de72a205cc22b18bea167",
+      "execution_sha256": "09a81975efddf1d90f02edec05c49acd4ae07cc793c675b1db888c63e510ba2e",
+      "change": "AST string constants containing original source-root paths only."
+    }
+  ],
+  "outputs": [
+    {
+      "id": "S1",
+      "pdf": "S1-atacama_covariates_overview.pdf",
+      "sha256": "c419fd2d8ae335650506148d5b86db3b9288ace889cbdabc37bf23f685541fec",
+      "reference": "reference/atacama_covariates_overview.pdf",
+      "reference_sha256": "f992e56ddc494767b890a6efb5d8f96cf6dde68413a6d14c3eb51d754b969eec",
+      "source_manifest_sha256": "5779179a4a00cd40a883a5b88fedad4d216979bd67af432b5ff1033d689a5406",
+      "generator": "snapshot/canonical/outputs/fresh-atacama-workflow/tutorial-figure-generation/replot_first_three.py",
+      "model_fitting": false
+    },
+    {
+      "id": "S2",
+      "pdf": "S2-atacama_top15_clr_mclr_heatmaps.pdf",
+      "sha256": "4ea4913cec17f3b00a0d7db47eda216f18e63aff82c4db4f3708d2cbcf48bf67",
+      "reference": "reference/atacama_top15_clr_mclr_heatmaps.pdf",
+      "reference_sha256": "49631f6ed74e9e0b1b0443dba6390ce49291796c39df7d436fb14aff3e9b4249",
+      "source_manifest_sha256": "5779179a4a00cd40a883a5b88fedad4d216979bd67af432b5ff1033d689a5406",
+      "generator": "snapshot/canonical/outputs/fresh-atacama-workflow/tutorial-figure-generation/replot_first_three.py",
+      "model_fitting": false
+    },
+    {
+      "id": "S3",
+      "pdf": "S3-atacama_top15_classo_selection_large_type.pdf",
+      "sha256": "d2cfd76462878481c650f380319abfea03d2edc1664b6f538a3738c8041762d5",
+      "reference": "reference/atacama_top15_classo_selection_large_type.pdf",
+      "reference_sha256": "6b45fd393f30d5977f0a2341a1ee80aeff77c778f797973397e66f4c8f702568",
+      "source_manifest_sha256": "5779179a4a00cd40a883a5b88fedad4d216979bd67af432b5ff1033d689a5406",
+      "generator": "snapshot/canonical/outputs/fresh-atacama-workflow/tutorial-figure-generation/replot_first_three.py",
+      "model_fitting": false
+    },
+    {
+      "id": "S4",
+      "pdf": "S4-atacama_top15_classo_cv_refit.pdf",
+      "sha256": "458c4e53b5cc372d7d18a98de0b2a608430de216653fbd92f3e33afbfd8613ca",
+      "reference": "reference/atacama_top15_classo_cv_refit.pdf",
+      "reference_sha256": "0fa6c62377045277ca2ef5a4de5b3aca5e450a387b45aef18207641cc3985221",
+      "source_manifest_sha256": "5779179a4a00cd40a883a5b88fedad4d216979bd67af432b5ff1033d689a5406",
+      "generator": "snapshot/canonical/outputs/fresh-atacama-workflow/q2-classo-top15/plot_top15_classo_qiime_figures.py",
+      "model_fitting": false
+    },
+    {
+      "id": "S5",
+      "pdf": "S5-atacama_top15_classo_stabsel_refit.pdf",
+      "sha256": "209986b42eb9bcc28f2ccef02af84e782ba879b923e2be50ed4720f90696a2ca",
+      "reference": "reference/atacama_top15_classo_stabsel_refit.pdf",
+      "reference_sha256": "c151cb9832e9e7c3c7d090b871dbdb60ff7c78a59afe4b02564d02e7c38172e0",
+      "source_manifest_sha256": "5779179a4a00cd40a883a5b88fedad4d216979bd67af432b5ff1033d689a5406",
+      "generator": "snapshot/canonical/outputs/fresh-atacama-workflow/q2-classo-top15/plot_top15_classo_qiime_figures.py",
+      "model_fitting": false
+    },
+    {
+      "id": "S6",
+      "pdf": "S6-atacama_top15_classo_vegetation_cv_curve.pdf",
+      "sha256": "7843219af7eb2e1864b57e93908af50389f54c94c2426defc1006cbe3dc709e8",
+      "reference": "reference/atacama_top15_classo_vegetation_cv_curve.pdf",
+      "reference_sha256": "51d95b7734ea1f66698cd9ebac1b785d7f43ae18d44be7557e1daee66333a84c",
+      "source_manifest_sha256": "5779179a4a00cd40a883a5b88fedad4d216979bd67af432b5ff1033d689a5406",
+      "generator": "snapshot/canonical/outputs/fresh-atacama-workflow/q2-classo-top15/plot_top15_classo_qiime_figures.py",
+      "model_fitting": false
+    },
+    {
+      "id": "S7",
+      "pdf": "S7-atacama_top15_classo_vegetation_cv_refit.pdf",
+      "sha256": "684745ee49e0e70bb90d04c839130b9ec97aeefddf14a73c82a3791d2fdd1c95",
+      "reference": "reference/atacama_top15_classo_vegetation_cv_refit.pdf",
+      "reference_sha256": "4596a50ba3e88cb41bf850b6af5b9ca68fbfd7bc1ac5e781e9997c5204f13ae7",
+      "source_manifest_sha256": "5779179a4a00cd40a883a5b88fedad4d216979bd67af432b5ff1033d689a5406",
+      "generator": "snapshot/canonical/outputs/fresh-atacama-workflow/q2-classo-top15/plot_top15_classo_qiime_figures.py",
+      "model_fitting": false
+    },
+    {
+      "id": "S8",
+      "pdf": "S8-atacama_top15_gglasso_four_matrix_comparison.pdf",
+      "sha256": "c5058add77bc97cb6f8c8750f7e3888dbdf4d7ab60e74a8349aba8d7e170580f",
+      "reference": "reference/atacama_top15_gglasso_four_matrix_comparison.pdf",
+      "reference_sha256": "4866be74ced9c0c5626157a3cb594fd8d130e89f157cb5889304e58aed789ee1",
+      "source_manifest_sha256": "5779179a4a00cd40a883a5b88fedad4d216979bd67af432b5ff1033d689a5406",
+      "generator": "snapshot/canonical/outputs/fresh-atacama-workflow/q2-gglasso-top15/plot_top15_gglasso_qiime_figures.py",
+      "model_fitting": false
+    },
+    {
+      "id": "S9",
+      "pdf": "S9-atacama_top300_elevation_r3_equalweights_cv_curves.pdf",
+      "sha256": "1e14a7f136be831271de4726fa60601099f3bbfe84dc4008943483da78f89eaa",
+      "reference": "reference/atacama_top300_elevation_r3_equalweights_cv_curves.pdf",
+      "reference_sha256": "7472f5a89927a7bef8d46e0fa41f494e8fc5c154c2090c9c987b9e3dba1da639",
+      "source_manifest_sha256": "5779179a4a00cd40a883a5b88fedad4d216979bd67af432b5ff1033d689a5406",
+      "generator": "snapshot/canonical/outputs/fresh-atacama-workflow/q2-classo-top300/plot_top300_classo_elevation_matched_style.py",
+      "model_fitting": false
+    },
+    {
+      "id": "S10",
+      "pdf": "S10-atacama_top300_elevation_asv_only_r3_refit.pdf",
+      "sha256": "dcc8684bbbfef2f3be782501b0becd8635cc74cf97ec41de43fee007db4850b0",
+      "reference": "reference/atacama_top300_elevation_asv_only_r3_refit.pdf",
+      "reference_sha256": "017ae7ef7e27676c003fa4d7ae4f4f53fc83d540d89faa1d2ba4d1c66f91a5e9",
+      "source_manifest_sha256": "5779179a4a00cd40a883a5b88fedad4d216979bd67af432b5ff1033d689a5406",
+      "generator": "snapshot/canonical/outputs/fresh-atacama-workflow/q2-classo-top300/plot_top300_classo_elevation_matched_style.py",
+      "model_fitting": false
+    },
+    {
+      "id": "S11",
+      "pdf": "S11-atacama_top300_elevation_equalweights_joint_r3_refit.pdf",
+      "sha256": "8df77ac607b2a9fef8c730f76246bb9b225094a3feb2ba5c52878e70038c4fbc",
+      "reference": "reference/atacama_top300_elevation_equalweights_joint_r3_refit.pdf",
+      "reference_sha256": "cbad4d823fe6fdb7cf3790bfa43f8cc299f3c88ee382690fd67faebf2677d3cb",
+      "source_manifest_sha256": "5779179a4a00cd40a883a5b88fedad4d216979bd67af432b5ff1033d689a5406",
+      "generator": "snapshot/canonical/outputs/fresh-atacama-workflow/q2-classo-top300/plot_top300_classo_elevation_matched_style.py",
+      "model_fitting": false
+    },
+    {
+      "id": "S12",
+      "pdf": "S12-atacama_top300_vegetation_classification_cv_and_stabsel_selection.pdf",
+      "sha256": "8aff2c550b59d1ab23d8d80869130c001f9dd54cd6005eb028bf54d914d6c3cf",
+      "reference": "reference/atacama_top300_vegetation_classification_cv_and_stabsel_selection.pdf",
+      "reference_sha256": "479dd9be80c8c0104293b638445675ace9707c0ddf0f5919ca7293d238c538aa",
+      "source_manifest_sha256": "5779179a4a00cd40a883a5b88fedad4d216979bd67af432b5ff1033d689a5406",
+      "generator": "snapshot/canonical/outputs/fresh-atacama-workflow/q2-classo-top300/plot_top300_vegetation_classification_matched_style.py",
+      "model_fitting": false
+    },
+    {
+      "id": "S13",
+      "pdf": "S13-atacama_top300_vegetation_classification_cv_refit.pdf",
+      "sha256": "0c3518444a89337f38243ab9afc41753f51932c59eb7bcc5768726c3c1d40623",
+      "reference": "reference/atacama_top300_vegetation_classification_cv_refit.pdf",
+      "reference_sha256": "ff3fc98fa1371ea4b0a4914746e559371a1ddc6daa2d972b07b23b1a0ee28d78",
+      "source_manifest_sha256": "5779179a4a00cd40a883a5b88fedad4d216979bd67af432b5ff1033d689a5406",
+      "generator": "snapshot/canonical/outputs/fresh-atacama-workflow/q2-classo-top300/plot_top300_vegetation_classification_matched_style.py",
+      "model_fitting": false
+    },
+    {
+      "id": "S14",
+      "pdf": "S14-atacama_top300_vegetation_classification_stabsel_refit.pdf",
+      "sha256": "2a43246b21376098c230985f966d09593b81fc0cfb63108758ab7d1ab3353d9f",
+      "reference": "reference/atacama_top300_vegetation_classification_stabsel_refit.pdf",
+      "reference_sha256": "1bc46f2a1fbedfc04e49e75c6f4de5ed9b71f10c4e84c88771ff4d01b84338c8",
+      "source_manifest_sha256": "5779179a4a00cd40a883a5b88fedad4d216979bd67af432b5ff1033d689a5406",
+      "generator": "snapshot/canonical/outputs/fresh-atacama-workflow/q2-classo-top300/plot_top300_vegetation_classification_matched_style.py",
+      "model_fitting": false
+    },
+    {
+      "id": "S15",
+      "pdf": "S15-atacama_top300_gglasso_active_asv_networks.pdf",
+      "sha256": "ce0fa336c8f0a006c85fd2b15065284963aa6744612b5ddcb4bd19ffc93bced9",
+      "reference": "reference/atacama_top300_gglasso_active_asv_networks.pdf",
+      "reference_sha256": "9064493af79ef0300f3103536cc9f5894b6455928d4e30e60a2d1d311517d654",
+      "source_manifest_sha256": "5779179a4a00cd40a883a5b88fedad4d216979bd67af432b5ff1033d689a5406",
+      "generator": "snapshot/canonical/outputs/fresh-atacama-workflow/q2-gglasso-top300/plot_top300_gglasso_reduced_matrices.py",
+      "model_fitting": false
+    },
+    {
+      "id": "S16",
+      "pdf": "S16-atacama_top300_slr_rank2_robust_pca_covariates.pdf",
+      "sha256": "f8f0f170af3f8ff064da5bb73275af0b552632fb6187ed36b2266d5b495fa32b",
+      "reference": "reference/atacama_top300_slr_rank2_robust_pca_covariates.pdf",
+      "reference_sha256": "caa25131dcf3d92a68e0f5ad4be12037255eab1da4b5101be16a51e9ae640684",
+      "source_manifest_sha256": "5779179a4a00cd40a883a5b88fedad4d216979bd67af432b5ff1033d689a5406",
+      "generator": "snapshot/canonical/outputs/fresh-atacama-workflow/q2-gglasso-top300/plot_top300_slr_robust_pca_qiime_export_summary.py",
+      "model_fitting": false
+    },
+    {
+      "id": "S17",
+      "pdf": "S17-motus_age_slc_r3_model_selection.pdf",
+      "sha256": "8ad7bd54861051e2ea7d46bf17af5dfc5834d76fa521a3eff85e229dbf7e0d05",
+      "reference": "reference/motus_age_slc_r3_model_selection.pdf",
+      "reference_sha256": "f150d27f301142b01762bddae3953e9cfe23a953351a00abed6c5de08b9e18d3",
+      "source_manifest_sha256": "5779179a4a00cd40a883a5b88fedad4d216979bd67af432b5ff1033d689a5406",
+      "generator": "snapshot/audit-project/outputs/motus-merged/scripts/plot_motus_slc_trac_tutorial_figures.py",
+      "model_fitting": false
+    },
+    {
+      "id": "S18",
+      "pdf": "S18-motus_age_slc_r3_cv_refit.pdf",
+      "sha256": "71d0772fd4b3845fe0daf2e43f09482f3034f7049ccf5a25ce6926caee2df5f9",
+      "reference": "reference/motus_age_slc_r3_cv_refit.pdf",
+      "reference_sha256": "b688704d6d34d7139b40b448cd4653b8fd3289318b296bc4ae22e64bc47734e5",
+      "source_manifest_sha256": "5779179a4a00cd40a883a5b88fedad4d216979bd67af432b5ff1033d689a5406",
+      "generator": "snapshot/audit-project/outputs/motus-merged/scripts/plot_motus_slc_trac_tutorial_figures.py",
+      "model_fitting": false
+    },
+    {
+      "id": "S19",
+      "pdf": "S19-motus_age_trac_r3_model_selection.pdf",
+      "sha256": "b4bedbdb30ba5d20ee0d44e755a4b0bd49e179fb118b595463fcf6405cf886ba",
+      "reference": "reference/motus_age_trac_r3_model_selection.pdf",
+      "reference_sha256": "b0bad03799a0dc0ee9e19af822b18e200f4b2a10910e2a05181cff7c9b46b595",
+      "source_manifest_sha256": "5779179a4a00cd40a883a5b88fedad4d216979bd67af432b5ff1033d689a5406",
+      "generator": "snapshot/audit-project/outputs/motus-merged/scripts/plot_motus_slc_trac_tutorial_figures.py",
+      "model_fitting": false
+    },
+    {
+      "id": "S20",
+      "pdf": "S20-motus_age_trac_r3_cv_refit.pdf",
+      "sha256": "085a8897601945564896ff38dc454d5c7b92c29acbdbb3966d0eb24587670cee",
+      "reference": "reference/motus_age_trac_r3_cv_refit.pdf",
+      "reference_sha256": "903ec37aafe2d8a977721c5755b6c17c7c3dae977a499560ed6ed2a21366fac2",
+      "source_manifest_sha256": "5779179a4a00cd40a883a5b88fedad4d216979bd67af432b5ff1033d689a5406",
+      "generator": "snapshot/audit-project/outputs/motus-merged/scripts/plot_motus_slc_trac_tutorial_figures.py",
+      "model_fitting": false
+    },
+    {
+      "id": "S21",
+      "pdf": "S21-motus_age_trac_r3_stabsel_refit.pdf",
+      "sha256": "6c073c83aa421fac027e3897426af1f1d30b4763cc263f630ac8008f022fac69",
+      "reference": "reference/motus_age_trac_r3_stabsel_refit.pdf",
+      "reference_sha256": "f8e3eae33a056be0fc33f5fff29cffd820afa5336bc29f9101b77418d8bff245",
+      "source_manifest_sha256": "5779179a4a00cd40a883a5b88fedad4d216979bd67af432b5ff1033d689a5406",
+      "generator": "snapshot/audit-project/outputs/motus-merged/scripts/plot_motus_slc_trac_tutorial_figures.py",
+      "model_fitting": false
+    },
+    {
+      "id": "S22",
+      "pdf": "S22-motus_60_clr_sgl_lowrank_sparse_matrices.pdf",
+      "sha256": "01b97ca93a93eb76d03e02f4b99dcff230448704967d002338b84dffd5d5f501",
+      "reference": "reference/motus_60_clr_sgl_lowrank_sparse_matrices.pdf",
+      "reference_sha256": "8167390b5805f7c90ec249a417add96f2b59b22752de4af6c9a45fea5e3fe3b5",
+      "source_manifest_sha256": "5779179a4a00cd40a883a5b88fedad4d216979bd67af432b5ff1033d689a5406",
+      "generator": "snapshot/audit-project/outputs/motus-merged/scripts/plot_motus_gglasso_tutorial_figures.py",
+      "model_fitting": false
+    },
+    {
+      "id": "S23",
+      "pdf": "S23-motus_60_slr_selected_lowrank_and_covariates.pdf",
+      "sha256": "9f52fd5bd445d2cd7ebdcf428715c6bbda860deee1f45d56d67bb657faeaac20",
+      "reference": "reference/motus_60_slr_selected_lowrank_and_covariates.pdf",
+      "reference_sha256": "606684dc89c6216c398e7b38cf135d091ec8d7eef9cc27e68b319cd35ebd6398",
+      "source_manifest_sha256": "5779179a4a00cd40a883a5b88fedad4d216979bd67af432b5ff1033d689a5406",
+      "generator": "snapshot/audit-project/outputs/motus-merged/scripts/plot_motus_lowrank_covariates.py",
+      "model_fitting": false
+    },
+    {
+      "id": "S24",
+      "pdf": "S24-bracken_bean_clr_filtered_data_sorted_by_label.pdf",
+      "sha256": "0679a5bf14f5d4aca805b64744dd8e40c1c869ccaedd3a2856ff6656a6de4217",
+      "reference": "reference/bracken_bean_clr_filtered_data_sorted_by_label.pdf",
+      "reference_sha256": "47af21a2dd1b3e77cb6a496d19ee6b6eb3d4dfdc584e907f4cb72f14e5df4846",
+      "source_manifest_sha256": "5779179a4a00cd40a883a5b88fedad4d216979bd67af432b5ff1033d689a5406",
+      "generator": "snapshot/audit-project/outputs/bracken-beans/scripts/plot_bracken_final_classification.py",
+      "model_fitting": false
+    },
+    {
+      "id": "S25",
+      "pdf": "S25-bracken_bean_classification_cv.pdf",
+      "sha256": "4fef4242b1497b41bbc8f98fcee427799dfe94019f715766576f4a7bc042ff77",
+      "reference": "reference/bracken_bean_classification_cv.pdf",
+      "reference_sha256": "364198f2d37b04a1a2302c8ce7040fa571769cf18518211b4477993ea846bffd",
+      "source_manifest_sha256": "5779179a4a00cd40a883a5b88fedad4d216979bd67af432b5ff1033d689a5406",
+      "generator": "snapshot/audit-project/outputs/bracken-beans/scripts/plot_bracken_final_classification.py",
+      "model_fitting": false
+    },
+    {
+      "id": "S26",
+      "pdf": "S26-bracken_bean_classification_cv_penalized_three_panel.pdf",
+      "sha256": "9020f80179bff5db66727bc5038ebf94979d0882e00bf5640411b5fba9f3c732",
+      "reference": "reference/bracken_bean_classification_cv_penalized_three_panel.pdf",
+      "reference_sha256": "20303c2dfd5c05e23517ee4e39115435c5dc6c86d377cd0186c32cf4bad341f0",
+      "source_manifest_sha256": "5779179a4a00cd40a883a5b88fedad4d216979bd67af432b5ff1033d689a5406",
+      "generator": "snapshot/audit-project/outputs/bracken-beans/scripts/plot_bracken_final_classification.py",
+      "model_fitting": false
+    }
+  ]
+}
