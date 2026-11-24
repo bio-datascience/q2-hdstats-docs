@@ -12,14 +12,12 @@ along with the feature tables, taxonomy, and metadata for your chosen example.
 Check [Reproducibility and source versions](reproducibility.md) for the package
 revisions used to generate the results shown here.
 
-```{important}
-Prepared inputs are available for the Atacama 15-ASV and top-300 examples and
-the MAP mOTU example. Download the bundle linked on the relevant data page;
-do not substitute older feature tables. These inputs and the scientific
-workflows were checked in the established, pinned environment. A fresh-machine
-installation test and portable entry points for all optional figures remain
-to be completed. Cocoa input redistribution is not yet confirmed.
-```
+Prepared input bundles are linked from each data page: Atacama top-15 and
+top-300, MAP mOTUs, and cocoa/Bracken. Use the matching bundle rather than older
+feature tables. The [installation recipe](reproducibility.md#install-the-tutorial-environment)
+was tested in a new isolated Intel macOS environment. Optional figure-reproduction
+commands appear in collapsed sections on the case-study pages.
+
 
 ## Follow a Worked Example
 

@@ -22,5 +22,17 @@
       "test": 8,
       "split": "subject-disjoint"
     }
+  },
+  "cocoa-inputs": {
+    "zip_sha256": "b46f95e1209f6a29bf70a428afa4b660ae8ad0811ffc472056e260e2416a10e2",
+    "files": 6,
+    "bytes": 6284486,
+    "dimensions": {
+      "samples": 14,
+      "raw_features": 10927,
+      "features": 61,
+      "train": 10,
+      "test": 4
+    }
   }
 }

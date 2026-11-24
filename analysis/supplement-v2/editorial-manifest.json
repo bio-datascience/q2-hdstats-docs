@@ -21,20 +21,49 @@
   },
   "tutorial/s2-02": {
     "baseline": "baselines/s2-02.md",
-    "published_sha256": "adba06d2a0984f5e735ffe049f6394964c4773d9a0422be55cc0066c6acbfeda",
+    "published_sha256": "0e88e82715c65f6f155303c794f40b20445187a44bbbacfc5f60bf73a4f414c6",
     "purpose": "Expose existing audited Supplement inputs under exact command filenames.",
     "command_filename_replacements": {},
     "notes": [
-      "Input download and working-directory guidance only; scientific commands and results unchanged."
+      "Input download and working-directory guidance only; scientific commands and results unchanged.",
+      "Adds portable plotting/download guidance or existing held-out prediction steps; source models and numerical settings unchanged."
     ]
   },
   "tutorial/s3": {
     "baseline": "baselines/s3.md",
-    "published_sha256": "f22c026ee1f5c6ce949079d6b9c6d2a239cfb0b120049601dac141cb4bc3c9cc",
+    "published_sha256": "7f46fa31f453851f9d7b46d4de439ffa54da2888711a49138fea0e3eece7e808",
     "purpose": "Expose existing audited Supplement inputs under exact command filenames.",
     "command_filename_replacements": {},
     "notes": [
-      "Input download and working-directory guidance only; scientific commands and results unchanged."
+      "Input download and working-directory guidance only; scientific commands and results unchanged.",
+      "Adds portable plotting/download guidance or existing held-out prediction steps; source models and numerical settings unchanged."
     ]
+  },
+  "tutorial/s3-01": {
+    "baseline": "baselines/s3-01.md",
+    "purpose": "Complete the existing Supplement workflow for standalone web use.",
+    "command_filename_replacements": {},
+    "notes": [
+      "Adds portable plotting/download guidance or existing held-out prediction steps; source models and numerical settings unchanged."
+    ],
+    "published_sha256": "159cc69b0bced7ec4cb13fb1840bd17d586869b57d44aa4ca0ef09f16f0192b0"
+  },
+  "tutorial/s4-01": {
+    "baseline": "baselines/s4-01.md",
+    "purpose": "Complete the existing Supplement workflow for standalone web use.",
+    "command_filename_replacements": {},
+    "notes": [
+      "Adds portable plotting/download guidance or existing held-out prediction steps; source models and numerical settings unchanged."
+    ],
+    "published_sha256": "9e275a1f0bab7864fc22d752e9b6e8dbafdf962f09c4f3c4935dfc465f085671"
+  },
+  "tutorial/s4": {
+    "baseline": "baselines/s4.md",
+    "purpose": "Complete the existing Supplement workflow for standalone web use.",
+    "command_filename_replacements": {},
+    "notes": [
+      "Adds portable plotting/download guidance or existing held-out prediction steps; source models and numerical settings unchanged."
+    ],
+    "published_sha256": "76c1d688e882a53b79faf19e9258306997c6a06dddcf8489e362365f004c40b0"
   }
 }

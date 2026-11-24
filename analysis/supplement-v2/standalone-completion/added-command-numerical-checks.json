@@ -1,0 +1,306 @@
+[
+  {
+    "check": "atacama-top300-elevation-asv-only-r3-cv",
+    "passed": true,
+    "detail": {
+      "differences": [],
+      "reference": "/Users/cmueller/Documents/ChatGPT/Atacama-q2-gglasso-q2-classo-tutorial/outputs/fresh-atacama-workflow/q2-classo-top300/atacama-top300-elevation-asv-only-r3-cv.qza",
+      "rerun": "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/added-command-replay/top300/atacama-top300-elevation-asv-only-r3-cv.qza"
+    }
+  },
+  {
+    "check": "atacama-top300-elevation-asv-only-r3-test-predictions",
+    "passed": true,
+    "detail": {
+      "differences": [],
+      "reference": "/Users/cmueller/Documents/ChatGPT/Atacama-q2-gglasso-q2-classo-tutorial/outputs/fresh-atacama-workflow/q2-classo-top300/atacama-top300-elevation-asv-only-r3-test-predictions.qza",
+      "rerun": "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/added-command-replay/top300/atacama-top300-elevation-asv-only-r3-test-predictions.qza"
+    }
+  },
+  {
+    "check": "atacama-top300-elevation-asv-only-r3-train-predictions",
+    "passed": true,
+    "detail": {
+      "differences": [],
+      "reference": "/Users/cmueller/Documents/ChatGPT/Atacama-q2-gglasso-q2-classo-tutorial/outputs/fresh-atacama-workflow/q2-classo-top300/atacama-top300-elevation-asv-only-r3-train-predictions.qza",
+      "rerun": "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/added-command-replay/top300/atacama-top300-elevation-asv-only-r3-train-predictions.qza"
+    }
+  },
+  {
+    "check": "atacama-top300-elevation-covariate-augmented-equalweights-r3-cv",
+    "passed": true,
+    "detail": {
+      "differences": [],
+      "reference": "/Users/cmueller/Documents/ChatGPT/Atacama-q2-gglasso-q2-classo-tutorial/outputs/fresh-atacama-workflow/q2-classo-top300/atacama-top300-elevation-covariate-augmented-equalweights-r3-cv.qza",
+      "rerun": "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/added-command-replay/top300/atacama-top300-elevation-covariate-augmented-equalweights-r3-cv.qza"
+    }
+  },
+  {
+    "check": "atacama-top300-elevation-covariate-augmented-equalweights-r3-test-predictions",
+    "passed": true,
+    "detail": {
+      "differences": [],
+      "reference": "/Users/cmueller/Documents/ChatGPT/Atacama-q2-gglasso-q2-classo-tutorial/outputs/fresh-atacama-workflow/q2-classo-top300/atacama-top300-elevation-covariate-augmented-equalweights-r3-test-predictions.qza",
+      "rerun": "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/added-command-replay/top300/atacama-top300-elevation-covariate-augmented-equalweights-r3-test-predictions.qza"
+    }
+  },
+  {
+    "check": "atacama-top300-elevation-covariate-augmented-equalweights-r3-train-predictions",
+    "passed": true,
+    "detail": {
+      "differences": [],
+      "reference": "/Users/cmueller/Documents/ChatGPT/Atacama-q2-gglasso-q2-classo-tutorial/outputs/fresh-atacama-workflow/q2-classo-top300/atacama-top300-elevation-covariate-augmented-equalweights-r3-train-predictions.qza",
+      "rerun": "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/added-command-replay/top300/atacama-top300-elevation-covariate-augmented-equalweights-r3-train-predictions.qza"
+    }
+  },
+  {
+    "check": "atacama-top300-test-53-clr-plus-asvscaled-covariates-equalweights",
+    "passed": true,
+    "detail": {
+      "shape": [
+        14,
+        291
+      ],
+      "reference_shape": [
+        14,
+        291
+      ],
+      "max_abs_error": 0.0,
+      "zero_sample_rows": 0,
+      "zero_feature_columns": 0
+    }
+  },
+  {
+    "check": "atacama-top300-test-53-clr",
+    "passed": true,
+    "detail": {
+      "shape": [
+        14,
+        285
+      ],
+      "reference_shape": [
+        14,
+        285
+      ],
+      "max_abs_error": 0.0,
+      "zero_sample_rows": 0,
+      "zero_feature_columns": 0
+    }
+  },
+  {
+    "check": "atacama-top300-train-53-clr-plus-asvscaled-covariates-equalweights",
+    "passed": true,
+    "detail": {
+      "shape": [
+        39,
+        291
+      ],
+      "reference_shape": [
+        39,
+        291
+      ],
+      "max_abs_error": 0.0,
+      "zero_sample_rows": 0,
+      "zero_feature_columns": 0
+    }
+  },
+  {
+    "check": "atacama-top300-train-53-clr",
+    "passed": true,
+    "detail": {
+      "shape": [
+        39,
+        285
+      ],
+      "reference_shape": [
+        39,
+        285
+      ],
+      "max_abs_error": 0.0,
+      "zero_sample_rows": 0,
+      "zero_feature_columns": 0
+    }
+  },
+  {
+    "check": "motus-age-slc-r3-train-predictions",
+    "passed": true,
+    "detail": {
+      "differences": [],
+      "reference": "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/motus-merged/artifacts/motus-age-slc-r3-train-predictions.qza",
+      "rerun": "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/added-command-replay/motus/motus-age-slc-r3-train-predictions.qza"
+    }
+  },
+  {
+    "check": "motus-age-slc-r3",
+    "passed": true,
+    "detail": {
+      "differences": [],
+      "reference": "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/motus-merged/artifacts/motus-age-slc-r3.qza",
+      "rerun": "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/added-command-replay/motus/motus-age-slc-r3.qza"
+    }
+  },
+  {
+    "check": "motus-age-trac-r3-test-predictions",
+    "passed": true,
+    "detail": {
+      "differences": [],
+      "reference": "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/motus-merged/artifacts/motus-age-trac-r3-test-predictions.qza",
+      "rerun": "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/added-command-replay/motus/motus-age-trac-r3-test-predictions.qza"
+    }
+  },
+  {
+    "check": "motus-age-trac-r3-train-predictions",
+    "passed": true,
+    "detail": {
+      "differences": [],
+      "reference": "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/motus-merged/artifacts/motus-age-trac-r3-train-predictions.qza",
+      "rerun": "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/added-command-replay/motus/motus-age-trac-r3-train-predictions.qza"
+    }
+  },
+  {
+    "check": "motus-age-trac-r3",
+    "passed": true,
+    "detail": {
+      "differences": [],
+      "reference": "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/motus-merged/artifacts/motus-age-trac-r3.qza",
+      "rerun": "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/added-command-replay/motus/motus-age-trac-r3.qza"
+    }
+  },
+  {
+    "check": "motus-clr-trac-test",
+    "passed": true,
+    "detail": {
+      "shape": [
+        8,
+        85
+      ],
+      "reference_shape": [
+        8,
+        85
+      ],
+      "max_abs_error": 0.0,
+      "zero_sample_rows": 0,
+      "zero_feature_columns": 0
+    }
+  },
+  {
+    "check": "motus-clr-trac-train",
+    "passed": true,
+    "detail": {
+      "shape": [
+        26,
+        85
+      ],
+      "reference_shape": [
+        26,
+        85
+      ],
+      "max_abs_error": 0.0,
+      "zero_sample_rows": 0,
+      "zero_feature_columns": 0
+    }
+  },
+  {
+    "check": "bracken-species-raw",
+    "passed": true,
+    "detail": {
+      "shape": [
+        14,
+        10927
+      ],
+      "reference_shape": [
+        14,
+        10927
+      ],
+      "max_abs_error": 0.0,
+      "zero_sample_rows": 0,
+      "zero_feature_columns": 0
+    }
+  },
+  {
+    "check": "cocoa-filtered",
+    "passed": true,
+    "detail": {
+      "shape": [
+        14,
+        61
+      ],
+      "reference_shape": [
+        14,
+        61
+      ],
+      "max_abs_error": 0.0,
+      "zero_sample_rows": 0,
+      "zero_feature_columns": 0
+    }
+  },
+  {
+    "check": "cocoa-test",
+    "passed": true,
+    "detail": {
+      "shape": [
+        4,
+        61
+      ],
+      "reference_shape": [
+        4,
+        61
+      ],
+      "max_abs_error": 0.0,
+      "zero_sample_rows": 0,
+      "zero_feature_columns": 0
+    }
+  },
+  {
+    "check": "cocoa-train",
+    "passed": true,
+    "detail": {
+      "shape": [
+        10,
+        61
+      ],
+      "reference_shape": [
+        10,
+        61
+      ],
+      "max_abs_error": 0.0,
+      "zero_sample_rows": 0,
+      "zero_feature_columns": 0
+    }
+  },
+  {
+    "check": "bracken-bean-type-train-clr05-c2-rho0-cv-no-refit-pr60-train-predictions",
+    "passed": true,
+    "detail": {
+      "differences": [],
+      "reference": "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/bracken-beans/artifacts/bracken-bean-type-train-clr05-c2-rho0-cv-no-refit-pr60-train-predictions.qza",
+      "rerun": "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/added-command-replay/cocoa-prediction/bracken-bean-type-train-clr05-c2-rho0-cv-no-refit-pr60-train-predictions.qza"
+    }
+  },
+  {
+    "check": "bracken-bean-type-train-clr05-c2-rho0-cv-no-refit-pr60",
+    "passed": true,
+    "detail": {
+      "differences": [],
+      "reference": "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/bracken-beans/artifacts/bracken-bean-type-train-clr05-c2-rho0-cv-no-refit-pr60.qza",
+      "rerun": "/Users/cmueller/Documents/Codex/2026-06-26/Atacama-q2-gglasso-q2-classo-tutorial/outputs/standalone-completion/added-command-replay/cocoa-prediction/bracken-bean-type-train-clr05-c2-rho0-cv-no-refit-pr60.qza"
+    }
+  },
+  {
+    "check": "bracken-species-prev14-total50k-train-clr05",
+    "passed": true,
+    "detail": {
+      "shape": [
+        10,
+        61
+      ],
+      "reference_shape": [
+        10,
+        61
+      ],
+      "max_abs_error": 0.0,
+      "zero_sample_rows": 0,
+      "zero_feature_columns": 0
+    }
+  }
+]

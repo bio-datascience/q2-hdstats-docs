@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-24",
+  "installation_scope": "New isolated Intel macOS (osx-64) environment; not clean-hardware or cross-platform validation.",
+  "cocoa_permission": "Public redistribution confirmed by the user on 2026-11-24.",
+  "downloads": {
+    "cocoa-inputs.zip": {
+      "sha256": "b46f95e1209f6a29bf70a428afa4b660ae8ad0811ffc472056e260e2416a10e2",
+      "bytes": 6284486
+    },
+    "tutorial-environment-osx64.zip": {
+      "sha256": "987c37b5922902812ac5fe35da5ece730cae70d2045abe506686945c991dcd81",
+      "bytes": 9378
+    },
+    "tutorial-figures.zip": {
+      "sha256": "4797c66ceaa1ad9a42333d27175080682230a6f103931a8a2607ac4653b4490d",
+      "bytes": 31293224
+    }
+  },
+  "validation_counts": {
+    "fresh_install_cli_checks": 30,
+    "fresh_install_artifact_comparisons": 29,
+    "added_cli_checks": 13,
+    "added_command_input_output_comparisons": 24,
+    "reproduced_figures": 26,
+    "pixel_identical_figures": 14
+  }
+}
