@@ -65,5 +65,14 @@
       "Adds portable plotting/download guidance or existing held-out prediction steps; source models and numerical settings unchanged."
     ],
     "published_sha256": "76c1d688e882a53b79faf19e9258306997c6a06dddcf8489e362365f004c40b0"
+  },
+  "tutorial/s1-02": {
+    "baseline": "baselines/s1-02.md",
+    "published_sha256": "e31b1f55c335e109b8b410ac1ff94d1f4189f7dc3a2c5465914e187120d713dc",
+    "purpose": "Repair MathJax rendering of equation 14 without changing its mathematical content.",
+    "command_filename_replacements": {},
+    "notes": [
+      "Removes a redundant LaTeX nonumber command and an internal blank line that made Sphinx emit incorrectly nested alignment environments. Source supplement, equation labels, all formulas, commands, and figures remain unchanged."
+    ]
   }
 }
