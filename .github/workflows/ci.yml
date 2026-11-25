@@ -70,6 +70,16 @@ jobs:
     - name: Check built tutorial links and images
       run: python analysis/scripts/check_built_tutorial.py .
 
+    - uses: actions/setup-node@v4
+      with:
+        node-version: "22"
+
+    - name: Check all deployed math with MathJax
+      run: |
+        npm install --prefix "$RUNNER_TEMP/mathjax-audit" mathjax-full@3.2.2 --ignore-scripts --no-audit --no-fund
+        python analysis/scripts/extract_math.py . docs/_build/html "$RUNNER_TEMP/tutorial-math.json"
+        MATHJAX_ROOT="$RUNNER_TEMP/mathjax-audit/node_modules/mathjax-full" node analysis/scripts/check_math.cjs "$RUNNER_TEMP/tutorial-math.json"
+
     - name: Sanity-check the built tree
       run: |
         set -euo pipefail
